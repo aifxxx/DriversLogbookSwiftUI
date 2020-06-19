@@ -11,28 +11,31 @@ import MapKit
 
 struct TripDetail: View {
     
-    //Checkboxen
-    @State var isChecked:Bool = false
-    func toggle(){isChecked = !isChecked}
+    
+    
     
     //Button
     @State var isActive: Bool = false
+    
+    //Tabbar Try
+    var tabbaritem = TabBar()
     
 var trip: Trip
 
 var body: some View {
     NavigationView {
-        
+        ScrollView {
     VStack (alignment: .leading) {
         HStack {
             Text(trip.date)
-                .font(.custom("PorscheSemiBold", size: 20))
+                .font(.custom("PorscheNext-SemiBold", size: 20))
             Image("active")
             .padding(.leading, 52)
             Text("Noch \(trip.activeDays) Tage bearbeitbar")
             .font(.custom("PorscheNext-Thin", size: 12))
             .foregroundColor(Color.init("FontLight"))
-        }
+        }.padding(.top, -20)
+        
         ZStack {
         BackgroundPrivate()
             VStack (alignment: .leading) {
@@ -42,6 +45,7 @@ var body: some View {
             //milage start
             Text("Ziel")
                 .bold()
+                .padding(.top, 20)
             Text(trip.endAddress)
             //milage end
                 HStack {
@@ -49,39 +53,28 @@ var body: some View {
                     Text("\(trip.distance) km")
                 }
                 Image("Line")
+                    //.padding(.top, 10)
+                    //.padding(.bottom, 10)
             
             Text("Fahrtkategorie")
                 .bold()
                 
                 //Tick Boxen
-                VStack (alignment: .leading){
-                    Button(action: toggle){
-                        HStack{
-                            Image(systemName: isChecked ? "checkmark.square": "square")
-                            Text("Privatfahrt") }
-                    }.foregroundColor(.black)
-                    
-                    Button(action: toggle){
-                        HStack{
-                            Image(systemName: isChecked ? "checkmark.square": "square")
-                            Text("Geschäftsfahrt") }
-                    }.foregroundColor(.black)
-                    
-                    Button(action: toggle){
-                        HStack{
-                            Image(systemName: isChecked ? "checkmark.square": "square")
-                            Text("Arbeitsweg") }
-                    }.foregroundColor(.black)
-                }
+                RadioButtonGroup { selected in
+                    print("Selected item: \(selected)")
+                }.padding(.bottom, -10)
                 
                 
                 
                 
                 
             }.font(.custom("PorscheNext-Regular", size: 16))
+            .frame(width: 275, height: 380)
+                .padding(.top, -25)
             
             
-        }
+            
+        }.padding(.top, -10)
         //Button
         NavigationLink(destination: TripList(), isActive: self.$isActive) {
             Button("Fahrt speichern") {
@@ -91,10 +84,14 @@ var body: some View {
             }.frame(width: 295, height: 48)
             .foregroundColor(.white)
                 .background(Color.init("PorscheRot"))
+                .font(.custom("PorscheNext-Regular", size: 16))
                 .padding(.top, 10)
+                .padding(.bottom, 30)
         }
-    }
+    }.padding()
 }
+    }.padding(-40)
+    
 }
 }
 

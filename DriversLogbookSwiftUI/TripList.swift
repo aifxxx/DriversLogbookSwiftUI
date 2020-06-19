@@ -21,7 +21,7 @@ struct TripList: View {
         
         NavigationView {
             List(tripData) { trip in
-                ZStack {
+                ZStack (alignment: .center){
                 TripCard(trip: trip)
                 NavigationLink(destination: TripDetail(trip: trip)) {
                     TripCard(trip: trip)
@@ -34,6 +34,7 @@ struct TripList: View {
             }.navigationBarTitle(Text("Deine Fahrten"))
             
         }
+            .frame(width: 355, height: 500, alignment: .center)
             
         }
     }
