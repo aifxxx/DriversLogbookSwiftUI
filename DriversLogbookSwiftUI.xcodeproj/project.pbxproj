@@ -42,6 +42,8 @@
 		0D429031249C964B000814A5 /* BackgroundPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429030249C964B000814A5 /* BackgroundPrivate.swift */; };
 		0D429033249CD6D2000814A5 /* RadioButtonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429032249CD6D1000814A5 /* RadioButtonField.swift */; };
 		0D429035249CEB25000814A5 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429034249CEB25000814A5 /* RadioButtonGroup.swift */; };
+		0D42903824A0A95B000814A5 /* TripData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42903724A0A95B000814A5 /* TripData.swift */; };
+		0D42903D24A0B8BE000814A5 /* ActiveDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42903C24A0B8BE000814A5 /* ActiveDays.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		0D429030249C964B000814A5 /* BackgroundPrivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundPrivate.swift; sourceTree = "<group>"; };
 		0D429032249CD6D1000814A5 /* RadioButtonField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonField.swift; sourceTree = "<group>"; };
 		0D429034249CEB25000814A5 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		0D42903724A0A95B000814A5 /* TripData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripData.swift; sourceTree = "<group>"; };
+		0D42903C24A0B8BE000814A5 /* ActiveDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		0D428FAC249A1FF6000814A5 = {
 			isa = PBXGroup;
 			children = (
+				0D42903B24A0B8AD000814A5 /* Helper */,
 				0D428FFC249B6803000814A5 /* Models */,
 				0D428FB7249A1FF6000814A5 /* DriversLogbookSwiftUI */,
 				0D428FF9249B676B000814A5 /* Resources */,
@@ -222,6 +227,7 @@
 				0D428FFD249B6812000814A5 /* Data.swift */,
 				0D428FFF249B681D000814A5 /* Trip.swift */,
 				0D429026249B9D95000814A5 /* User.swift */,
+				0D42903724A0A95B000814A5 /* TripData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +269,14 @@
 				0D429034249CEB25000814A5 /* RadioButtonGroup.swift */,
 			);
 			path = TripDetail;
+			sourceTree = "<group>";
+		};
+		0D42903B24A0B8AD000814A5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0D42903C24A0B8BE000814A5 /* ActiveDays.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,9 +455,11 @@
 				0D428FBE249A1FF6000814A5 /* DriversLogbookSwiftUI.xcdatamodeld in Sources */,
 				0D429031249C964B000814A5 /* BackgroundPrivate.swift in Sources */,
 				0D428FC0249A1FF6000814A5 /* ContentView.swift in Sources */,
+				0D42903D24A0B8BE000814A5 /* ActiveDays.swift in Sources */,
 				0D429006249B6B5A000814A5 /* TripDetail.swift in Sources */,
 				0D429008249B6C0C000814A5 /* TripCard.swift in Sources */,
 				0D42902B249BABD3000814A5 /* TabBar.swift in Sources */,
+				0D42903824A0A95B000814A5 /* TripData.swift in Sources */,
 				0D429004249B6AB2000814A5 /* TripList.swift in Sources */,
 				0D428FBB249A1FF6000814A5 /* SceneDelegate.swift in Sources */,
 				0D429027249B9D95000814A5 /* User.swift in Sources */,

@@ -21,6 +21,8 @@ struct TripDetail: View {
     //Trip Instance for data
     var trip: Trip
     
+    
+    
     //UI starts here
     var body: some View {
         
@@ -31,6 +33,8 @@ struct TripDetail: View {
                 
                 VStack (alignment: .leading) {
                     
+                    
+                    
                     //Spacer to separate NavBar and main elements
                     Spacer().padding(.top, 40)
                     
@@ -38,13 +42,24 @@ struct TripDetail: View {
                     HStack {
                         Text(trip.date)
                             .font(.custom("PorscheNext-SemiBold", size: 20))
-                        Image("active")
-                            .padding(.leading, 52)
+                        if trip.activeDays >= 3 {
+                            Image("active")
+                                .padding(.leading, 52)
+                            
+                        } else if trip.activeDays >= 0 {
+                            Image("active3")
+                                .padding(.leading, 52)
+                            
+                        } else {
+                            Image("active0")
+                                .padding(.leading, 52)
+                            
+                        }
                         Text("Noch \(trip.activeDays) Tage bearbeitbar")
                             .font(.custom("PorscheNext-Thin", size: 12))
                             .foregroundColor(Color.init("FontLight"))
+                        
                     }.padding(.top, -20)
-                    
                     
                     //Card Design from Start to Category
                     ZStack {
@@ -82,7 +97,7 @@ struct TripDetail: View {
                             RadioButtonGroup { selected in
                                 print("Selected item: \(selected)")
                             }.padding(.bottom, -10)
-  
+                            
                         }.font(.custom("PorscheNext-Regular", size: 16))
                             .frame(width: 275, height: 380)
                             .padding(.top, -25)

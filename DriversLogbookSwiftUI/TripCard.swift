@@ -27,8 +27,16 @@ struct TripCard: View {
                     Text(trip.category)
                     .font(.custom("PorscheNext-SemiBold", size: 18))
                     
-                    Image("active")
-                    .padding(.leading, 20)
+                    if trip.activeDays >= 3 {
+                        Image("active")
+                        .padding(.leading, 20)
+                    } else if trip.activeDays >= 0 {
+                    Image("active3")
+                        .padding(.leading, 20)
+                    } else {
+                    Image("active0")
+                        .padding(.leading, 20)
+                    }
                     Text("Noch \(trip.activeDays) Tage bearbeitbar")
                     .font(.custom("PorscheNext-Thin", size: 12))
                     .foregroundColor(Color.init("FontLight"))
