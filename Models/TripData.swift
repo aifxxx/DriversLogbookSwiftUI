@@ -8,6 +8,12 @@
 import Combine
 import SwiftUI
 
-final class TripData: ObservableObject {
-    //@Published var trip = Trip.self
+class TripData {
+    
+//    @Published var trips = Trip
+//    
+//    var trips = [Trip]
+    
+    
+    
 }

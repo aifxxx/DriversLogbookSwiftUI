@@ -44,6 +44,8 @@
 		0D429035249CEB25000814A5 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429034249CEB25000814A5 /* RadioButtonGroup.swift */; };
 		0D42903824A0A95B000814A5 /* TripData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42903724A0A95B000814A5 /* TripData.swift */; };
 		0D42903D24A0B8BE000814A5 /* ActiveDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42903C24A0B8BE000814A5 /* ActiveDays.swift */; };
+		0DADB61624A219A80041B8EC /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */; };
+		0DADB61824A21BB90041B8EC /* SegConPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61724A21BB90041B8EC /* SegConPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		0D429034249CEB25000814A5 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
 		0D42903724A0A95B000814A5 /* TripData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripData.swift; sourceTree = "<group>"; };
 		0D42903C24A0B8BE000814A5 /* ActiveDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDays.swift; sourceTree = "<group>"; };
+		0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		0DADB61724A21BB90041B8EC /* SegConPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegConPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 		0D428FB7249A1FF6000814A5 /* DriversLogbookSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0DADB61424A2198A0041B8EC /* TripList */,
 				0D42902F249C962F000814A5 /* TripDetail */,
 				0D42902C249BAFF3000814A5 /* Profile */,
 				0D429021249B9CA1000814A5 /* Home */,
@@ -277,6 +282,15 @@
 				0D42903C24A0B8BE000814A5 /* ActiveDays.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		0DADB61424A2198A0041B8EC /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */,
+				0DADB61724A21BB90041B8EC /* SegConPreview.swift */,
+			);
+			path = TripList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +460,9 @@
 			files = (
 				0D429033249CD6D2000814A5 /* RadioButtonField.swift in Sources */,
 				0D429029249BA6F9000814A5 /* BarGraph.swift in Sources */,
+				0DADB61824A21BB90041B8EC /* SegConPreview.swift in Sources */,
 				0D429035249CEB25000814A5 /* RadioButtonGroup.swift in Sources */,
+				0DADB61624A219A80041B8EC /* CustomSegmentedControl.swift in Sources */,
 				0D429000249B681D000814A5 /* Trip.swift in Sources */,
 				0D428FB9249A1FF6000814A5 /* AppDelegate.swift in Sources */,
 				0D42902E249BAFFE000814A5 /* Profile.swift in Sources */,

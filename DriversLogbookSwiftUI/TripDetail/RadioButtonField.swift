@@ -10,6 +10,7 @@ import SwiftUI
 
 //Single Radio Button Field
 struct RadioButtonField: View {
+        
     //Checkboxen
     var id: String
     var label: String
@@ -82,6 +83,8 @@ struct RadioButtonGroup: View {
             false,
             callback: radioGroupCallback)
             
+        
+            
 }
     
     var radioBusinessMajority: some View {
@@ -108,7 +111,7 @@ struct RadioButtonGroup: View {
 struct MainView: View {
     var body: some View {
             RadioButtonGroup { selected in
-                print("Selected item: \(selected)")
+                print("Selected item: ")
             }
     }
 }

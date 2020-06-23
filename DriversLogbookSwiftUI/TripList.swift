@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TripList: View {
     
+    
     //Custom Styling
     init() {
         //remove divider from List

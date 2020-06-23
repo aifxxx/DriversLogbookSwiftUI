@@ -12,6 +12,7 @@ import MapKit
 //shows details of a single trip selected from the list
 struct TripDetail: View {
     
+    
     //Save Button
     @State var isActive: Bool = false
     
