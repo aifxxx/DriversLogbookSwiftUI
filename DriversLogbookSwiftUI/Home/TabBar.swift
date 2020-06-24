@@ -18,7 +18,7 @@ struct TabBar: View {
                     
                     
             }.tag(0)
-            TripList()
+            TripListDescending()
                 .tabItem {
                     Image("TripList")
                     Text("Deine Fahrten")

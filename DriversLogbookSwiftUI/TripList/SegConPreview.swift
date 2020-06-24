@@ -20,13 +20,15 @@ struct SegConPreview: View {
             CustomSegmentedControl(selected: self.$selected).padding(.top)
             
             if self.selected == 0 {
-                TripList()
+                TripListDescending()
                 
                 
             } else if self.selected == 1 {
-                TripList()
+                TripListAscending()
+                
+                
             } else {
-                TripList()
+                TripListStatus()
             }
         }.background(Color("Color").edgesIgnoringSafeArea(.all))
         

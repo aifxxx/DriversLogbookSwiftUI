@@ -13,6 +13,20 @@ import CoreLocation
 var tripData: [Trip] = load("TripData.json")
 let userData: [User] = load("User.json")
 
+//Sortierung alte zuerst
+let sortedDescending = tripData.sorted{
+    $0.date > $1.date
+}
+
+let sortedAscending = tripData.sorted {
+    $0.date < $1.date
+}
+
+let sortedStatus = tripData.sorted {
+    $0.activeDays < $1.activeDays
+}
+
+
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
@@ -34,11 +48,5 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
-
-
-
-//customObjects = customObjects.sorted(by: {
-//    $0.date.compare($1.date) == .orderedDescending
-//}
 
 

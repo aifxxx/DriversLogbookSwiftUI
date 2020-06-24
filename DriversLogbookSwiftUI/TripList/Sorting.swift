@@ -47,20 +47,20 @@ enum GroupOrder {
             }
 }
 
-    //DateFormatter, set a date format for the used date in var trips []
-    func parseDate(_ str : String) -> Date {
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "dd.MM.yyyy"
-        return dateFormat.date(from: str)!
-    }
-
-    //selects the used dateComponents from calendar
-    func firstDayOfMonth(date: Date) -> Date {
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month, .day], from: date)
-        return calendar.date(from: components)!
-    }
-    
+//    //DateFormatter, set a date format for the used date in var trips []
+//    func parseDate(_ str : String) -> Date {
+//        let dateFormat = DateFormatter()
+//        dateFormat.dateFormat = "dd.MM.yyyy"
+//        return dateFormat.date(from: str)!
+//    }
+//
+//    //selects the used dateComponents from calendar
+//    func firstDayOfMonth(date: Date) -> Date {
+//        let calendar = Calendar.current
+//        let components = calendar.dateComponents([.year, .month, .day], from: date)
+//        return calendar.date(from: components)!
+//    }
+//    
     
     
 

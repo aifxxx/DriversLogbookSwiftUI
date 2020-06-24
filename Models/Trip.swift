@@ -9,7 +9,8 @@
 import SwiftUI
 import CoreLocation
 
-struct Trip: Hashable, Codable, Identifiable {
+struct Trip: Hashable, Codable, Identifiable, Comparable {
+    
 
     var id: Int
     var date: String
@@ -30,44 +31,43 @@ struct Trip: Hashable, Codable, Identifiable {
         CLLocationCoordinate2D(latitude: endLocation.latitude, longitude: endLocation.longitude)
     }
     
-    
-    
-    
+
 struct Coordinates: Hashable, Codable {
     var latitude: Double
     var longitude: Double
 }
+    //bisher ungenutzt...
+    static func < (lhs: Trip, rhs: Trip) -> Bool {
+            return lhs.date < rhs.date
+        }
+        
+        static func == (lhs: Trip, rhs: Trip) -> Bool {
+            return lhs.date == rhs.date
+        }
+        
+        
+//        static func group (trips: [Trip], groupingOrder: GroupOrder) -> [Trip] {
+//            let groups = Dictionary(grouping: trips) { (trip) -> Date in
+//                return firstDayOfMonth(date: parseDate(trip.date))
+//        }
+//
+//    }
     
-    
+
+
+
 }
 
-//struct List {
-//    var tripList: [Trip]
-//
-//
-//}
-//let sortedTrips: () = tripData.sort {
-//    $0.date < $1.date
-//}
+//DateFormatter, set a date format for the used date in var trips []
+func parseDate(_ str : String) -> Date {
+    let dateFormat = DateFormatter()
+    dateFormat.dateFormat = "dd.MM.yyyy"
+    return dateFormat.date(from: str)!
+}
 
-// Trip
-//struct User {
-//    var firstName: String
-//}
-// tripData
-//var users = [
-//    User(firstName: "Jemima"),
-//    User(firstName: "Peter"),
-//    User(firstName: "David"),
-//    User(firstName: "Kelly"),
-//    User(firstName: "Isabella")
-//]
-//
-//users.sort {
-//    $0.firstName < $1.firstName
-//}
-//If you want to return a sorted array rather than sort it in place, use sorted() like this:
-//
-//let sortedUsers = users.sorted {
-//    $0.firstName < $1.firstName
-//}
+//selects the used dateComponents from calendar
+func firstDayOfMonth(date: Date) -> Date {
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.year, .month, .day], from: date)
+    return calendar.date(from: components)!
+}
