@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 import CoreLocation
 
-let tripData: [Trip] = load("TripData.json")
+var tripData: [Trip] = load("TripData.json")
 let userData: [User] = load("User.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
@@ -34,5 +34,11 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
+
+
+//customObjects = customObjects.sorted(by: {
+//    $0.date.compare($1.date) == .orderedDescending
+//}
 
 

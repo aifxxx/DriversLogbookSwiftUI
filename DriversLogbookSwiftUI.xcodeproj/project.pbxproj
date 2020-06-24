@@ -46,6 +46,7 @@
 		0D42903D24A0B8BE000814A5 /* ActiveDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42903C24A0B8BE000814A5 /* ActiveDays.swift */; };
 		0DADB61624A219A80041B8EC /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */; };
 		0DADB61824A21BB90041B8EC /* SegConPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61724A21BB90041B8EC /* SegConPreview.swift */; };
+		0DADB61A24A225E60041B8EC /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61924A225E60041B8EC /* Sorting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		0D42903C24A0B8BE000814A5 /* ActiveDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDays.swift; sourceTree = "<group>"; };
 		0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		0DADB61724A21BB90041B8EC /* SegConPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegConPreview.swift; sourceTree = "<group>"; };
+		0DADB61924A225E60041B8EC /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 			children = (
 				0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */,
 				0DADB61724A21BB90041B8EC /* SegConPreview.swift */,
+				0DADB61924A225E60041B8EC /* Sorting.swift */,
 			);
 			path = TripList;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				0D42903D24A0B8BE000814A5 /* ActiveDays.swift in Sources */,
 				0D429006249B6B5A000814A5 /* TripDetail.swift in Sources */,
 				0D429008249B6C0C000814A5 /* TripCard.swift in Sources */,
+				0DADB61A24A225E60041B8EC /* Sorting.swift in Sources */,
 				0D42902B249BABD3000814A5 /* TabBar.swift in Sources */,
 				0D42903824A0A95B000814A5 /* TripData.swift in Sources */,
 				0D429004249B6AB2000814A5 /* TripList.swift in Sources */,

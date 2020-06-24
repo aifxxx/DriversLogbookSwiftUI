@@ -8,9 +8,11 @@
 
 import SwiftUI
 
+
 struct SegConPreview: View {
     
     @State var selected = 0
+    
     
     var body: some View {
         
@@ -18,12 +20,13 @@ struct SegConPreview: View {
             CustomSegmentedControl(selected: self.$selected).padding(.top)
             
             if self.selected == 0 {
+                TripList()
                 
                 
             } else if self.selected == 1 {
-                
+                TripList()
             } else {
-                
+                TripList()
             }
         }.background(Color("Color").edgesIgnoringSafeArea(.all))
         
@@ -35,3 +38,5 @@ struct SegConPreview_Previews: PreviewProvider {
         SegConPreview()
     }
 }
+
+
