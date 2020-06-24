@@ -32,6 +32,7 @@ struct FullTripListView: View {
                 }
             }.background(Color("Color").edgesIgnoringSafeArea(.all))
                 .navigationBarTitle("Deine Fahrten")
+                
             }
         }
 }
