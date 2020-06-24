@@ -19,10 +19,8 @@ struct TripListDescending: View {
     }
     
     var body: some View {
-        NavigationView {
+        
             List {
-                
-                //sortedOnes!!! Sortierung alte zuerst
                 ForEach(sortedDescending) { trip in
                     Section(header: Text(trip.date)) {
                         ZStack (alignment: .center){
@@ -39,9 +37,9 @@ struct TripListDescending: View {
                     }.font(.custom("PorscheNext-SemiBold", size: 20))
                         .foregroundColor(.black)
                 }
-            }.navigationBarTitle(Text("Deine Fahrten"))
+            }
             .listStyle(GroupedListStyle())
-        }.frame(width: 355, height: 500, alignment: .center)
+        
         }
     }
 
@@ -56,10 +54,8 @@ init() {
 }
 
 var body: some View {
-    NavigationView {
+    
         List {
-            
-            //sortedOnes!!! Sortierung alte zuerst
             ForEach(sortedAscending) { trip in
                 Section(header: Text(trip.date)) {
                     ZStack (alignment: .center){
@@ -76,13 +72,14 @@ var body: some View {
                 }.font(.custom("PorscheNext-SemiBold", size: 20))
                     .foregroundColor(.black)
             }
-        }.navigationBarTitle(Text("Deine Fahrten"))
+        }
         .listStyle(GroupedListStyle())
-    }.frame(width: 355, height: 500, alignment: .center)
+    
     }
 }
 
 struct TripListStatus: View {
+
 //Custom Styling
 init() {
     //remove divider from List
@@ -93,10 +90,8 @@ init() {
 }
 
 var body: some View {
-    NavigationView {
+    
         List {
-            
-            //sortedOnes!!! Sortierung alte zuerst
             ForEach(sortedStatus) { trip in
                 Section(header: Text(trip.date)) {
                     ZStack (alignment: .center){
@@ -113,9 +108,9 @@ var body: some View {
                 }.font(.custom("PorscheNext-SemiBold", size: 20))
                     .foregroundColor(.black)
             }
-        }.navigationBarTitle(Text("Deine Fahrten"))
+        }
         .listStyle(GroupedListStyle())
-    }.frame(width: 355, height: 500, alignment: .center)
+    
     }
 }
 

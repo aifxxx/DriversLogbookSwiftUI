@@ -47,6 +47,7 @@
 		0DADB61624A219A80041B8EC /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */; };
 		0DADB61824A21BB90041B8EC /* SegConPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61724A21BB90041B8EC /* SegConPreview.swift */; };
 		0DADB61A24A225E60041B8EC /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61924A225E60041B8EC /* Sorting.swift */; };
+		0DADB61C24A38E6A0041B8EC /* FullTripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61B24A38E6A0041B8EC /* FullTripListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		0DADB61724A21BB90041B8EC /* SegConPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegConPreview.swift; sourceTree = "<group>"; };
 		0DADB61924A225E60041B8EC /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
+		0DADB61B24A38E6A0041B8EC /* FullTripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTripListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +294,7 @@
 				0DADB61524A219A80041B8EC /* CustomSegmentedControl.swift */,
 				0DADB61724A21BB90041B8EC /* SegConPreview.swift */,
 				0DADB61924A225E60041B8EC /* Sorting.swift */,
+				0DADB61B24A38E6A0041B8EC /* FullTripListView.swift */,
 			);
 			path = TripList;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				0DADB61624A219A80041B8EC /* CustomSegmentedControl.swift in Sources */,
 				0D429000249B681D000814A5 /* Trip.swift in Sources */,
 				0D428FB9249A1FF6000814A5 /* AppDelegate.swift in Sources */,
+				0DADB61C24A38E6A0041B8EC /* FullTripListView.swift in Sources */,
 				0D42902E249BAFFE000814A5 /* Profile.swift in Sources */,
 				0D429023249B9CAE000814A5 /* Home.swift in Sources */,
 				0D428FFE249B6812000814A5 /* Data.swift in Sources */,
