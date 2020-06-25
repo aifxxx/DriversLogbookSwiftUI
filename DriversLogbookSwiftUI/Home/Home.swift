@@ -12,6 +12,7 @@ struct Home: View {
     
     //var user: User
     
+    
     var body: some View {
         
 
@@ -26,6 +27,7 @@ struct Home: View {
             //.padding(.top, 30)
             .padding(.bottom, 10)
             BarGraph()
+                
             Text("Unvollständige Einträge")
                     .font(.custom("PorscheNext-SemiBold", size: 20))
                     .padding(.top, 10)
@@ -33,21 +35,43 @@ struct Home: View {
                     .padding(.trailing, 140)
                     .padding(.bottom, 0)
                 
-                //Aktive Fahrten hier
-                
-                 
+ //Aktive Fahrten hier
+                VStack {
+                ForEach(tripData) { trip in
+                    ZStack (alignment: .center){
+                        if trip.activeDays > 0 {
+                            TripCard(trip: trip)
+                            NavigationLink(destination: TripDetail(trip: trip)) {
+                                TripCard(trip: trip)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .frame(width: 0)
+                            .opacity(0)
+                        } else {
+                            EmptyView()
+                        }
+                        
+                    
+                    
+                    }
+                    
+                }.font(.custom("PorscheNext-SemiBold", size: 20))
+                    .foregroundColor(.black)
+                    .padding(.leading, 20)
+                }
                 
             Spacer()
             Text("Alle Fahrten findest du unter Fahrtenbuch")
                 .font(.custom("PorscheNext-Thin", size: 16))
                 .padding(.leading, 20)
+                .padding(.top, 20)
 
             }.navigationBarTitle(Text("Hallo!").font(.subheadline), displayMode: .large)
         }
         }
         }
     
-}
+ }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {

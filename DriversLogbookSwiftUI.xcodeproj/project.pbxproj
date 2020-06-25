@@ -48,6 +48,7 @@
 		0DADB61824A21BB90041B8EC /* SegConPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61724A21BB90041B8EC /* SegConPreview.swift */; };
 		0DADB61A24A225E60041B8EC /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61924A225E60041B8EC /* Sorting.swift */; };
 		0DADB61C24A38E6A0041B8EC /* FullTripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61B24A38E6A0041B8EC /* FullTripListView.swift */; };
+		0DADB61E24A491360041B8EC /* TripCardAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB61D24A491360041B8EC /* TripCardAlign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		0DADB61724A21BB90041B8EC /* SegConPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegConPreview.swift; sourceTree = "<group>"; };
 		0DADB61924A225E60041B8EC /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		0DADB61B24A38E6A0041B8EC /* FullTripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTripListView.swift; sourceTree = "<group>"; };
+		0DADB61D24A491360041B8EC /* TripCardAlign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardAlign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				0D429003249B6AB2000814A5 /* TripList.swift */,
 				0D429005249B6B5A000814A5 /* TripDetail.swift */,
 				0D429007249B6C0B000814A5 /* TripCard.swift */,
+				0DADB61D24A491360041B8EC /* TripCardAlign.swift */,
 				0D428FC1249A1FF8000814A5 /* Assets.xcassets */,
 				0D428FC6249A1FF8000814A5 /* LaunchScreen.storyboard */,
 				0D428FC9249A1FF8000814A5 /* Info.plist */,
@@ -474,6 +477,7 @@
 				0DADB61C24A38E6A0041B8EC /* FullTripListView.swift in Sources */,
 				0D42902E249BAFFE000814A5 /* Profile.swift in Sources */,
 				0D429023249B9CAE000814A5 /* Home.swift in Sources */,
+				0DADB61E24A491360041B8EC /* TripCardAlign.swift in Sources */,
 				0D428FFE249B6812000814A5 /* Data.swift in Sources */,
 				0D428FBE249A1FF6000814A5 /* DriversLogbookSwiftUI.xcdatamodeld in Sources */,
 				0D429031249C964B000814A5 /* BackgroundPrivate.swift in Sources */,

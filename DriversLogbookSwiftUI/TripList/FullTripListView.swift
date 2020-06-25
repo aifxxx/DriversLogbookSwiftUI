@@ -16,8 +16,8 @@ struct FullTripListView: View {
             
             NavigationView {
             
-            VStack (spacing: 8) {
-                CustomSegmentedControl(selected: self.$selected).padding(.top)
+            VStack () {
+                CustomSegmentedControl(selected: self.$selected)
                 
                 if self.selected == 0 {
                     TripListDescending()

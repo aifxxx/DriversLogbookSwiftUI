@@ -20,7 +20,7 @@ struct CustomSegmentedControl: View {
                 .foregroundColor(Color.white)
                 .frame(width: 375, height: 38)
                 .background(Color.white)
-                .shadow(color: Color.gray.opacity(0.5), radius: 2.0, x: 0, y: 1)
+                .shadow(color: Color.gray.opacity(0.5), radius: 2.0, x: 0, y: 2)
                 .padding(.bottom, 15)
                 
                 
