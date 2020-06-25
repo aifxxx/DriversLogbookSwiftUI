@@ -105,7 +105,7 @@ struct TripDetail: View {
                     }.padding(.top, -10)
                     
                     //Save Button
-                    NavigationLink(destination: TripListDescending(), isActive: self.$isActive) {
+                    NavigationLink(destination: FullTripListView(), isActive: self.$isActive) {
                         Button("Fahrt speichern") {
                             self.isActive = true
                         }.frame(width: 295, height: 48)

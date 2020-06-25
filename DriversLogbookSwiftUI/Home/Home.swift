@@ -36,6 +36,7 @@ struct Home: View {
                     .padding(.bottom, 0)
                 
  //Aktive Fahrten hier
+                
                 VStack {
                 ForEach(tripData) { trip in
                     ZStack (alignment: .center){
@@ -50,15 +51,12 @@ struct Home: View {
                         } else {
                             EmptyView()
                         }
-                        
-                    
-                    
                     }
-                    
+                    }
                 }.font(.custom("PorscheNext-SemiBold", size: 20))
                     .foregroundColor(.black)
                     .padding(.leading, 20)
-                }
+                
                 
             Spacer()
             Text("Alle Fahrten findest du unter Fahrtenbuch")
