@@ -65,7 +65,7 @@ struct TripDetail: View {
                     //Card Design from Start to Category
                     ZStack {
                         //the Card
-                        BackgroundPrivate()
+                        BackgroundPrivateMap()
                         
                         //Card elements
                         VStack (alignment: .leading) {
@@ -85,6 +85,8 @@ struct TripDetail: View {
                                 Text("\(trip.distance) km")
                             }
                             
+                            MapView().frame(width: 280, height: 180)
+                            
                             //Divider
                             Image("Line")
                             //.padding(.top, 10)
@@ -100,7 +102,7 @@ struct TripDetail: View {
                             }.padding(.bottom, -10)
                             
                         }.font(.custom("PorscheNext-Regular", size: 16))
-                            .frame(width: 275, height: 380)
+                            .frame(width: 275, height: 565)
                             .padding(.top, -25)
                     }.padding(.top, -10)
                     
@@ -115,7 +117,10 @@ struct TripDetail: View {
                             .padding(.top, 5)
                             .padding(.bottom, 30)
                     }
-                }.padding()
+                    
+                    
+                }
+                .padding()
                     .navigationBarTitle(" ", displayMode: .inline)
             }
         }.padding(-40)
