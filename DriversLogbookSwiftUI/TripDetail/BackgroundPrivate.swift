@@ -17,6 +17,15 @@ struct BackgroundPrivate: View {
     }
 }
 
+struct BackgroundPrivateMap: View {
+    var body: some View {
+        RoundedRectangle(cornerRadius: 4)
+        .frame(width: 295, height: 565)
+        .foregroundColor(Color.white)
+        .shadow(color: Color.gray.opacity(0.5), radius: 7, x: 0, y: 0)
+    }
+}
+
 struct BackgroundPrivate_Previews: PreviewProvider {
     static var previews: some View {
         BackgroundPrivate()

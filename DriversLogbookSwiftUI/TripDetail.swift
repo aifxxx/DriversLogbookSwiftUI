@@ -49,7 +49,7 @@ struct TripDetail: View {
                     //Card Design from Start to Category
                     ZStack {
                         //the Card
-                        BackgroundPrivate()
+                        BackgroundPrivateMap()
                         
                         //Card elements
                         VStack (alignment: .leading) {
@@ -68,6 +68,8 @@ struct TripDetail: View {
                                 Image("distance")
                                 Text("\(trip.distance) km")
                             }
+                            
+                            MapView(trip: trip).frame(width: 280, height: 180)
                             
                             //Divider
                             Image("Line")

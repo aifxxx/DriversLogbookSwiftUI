@@ -30,6 +30,18 @@ struct Trip: Hashable, Codable, Identifiable{
         CLLocationCoordinate2D(latitude: endLocation.latitude, longitude: endLocation.longitude)
     }
     
+    var latitudeArray: [Double] {
+        [startLocation.latitude, endLocation.latitude]
+    }
+    
+    var longitudeArray: [Double] {
+        [startLocation.longitude, endLocation.longitude]
+    }
+    
+    var points: [CLLocationCoordinate2D] {
+        [startLocationCoordinates, endLocationCoordinates]
+    }
+    
 struct Coordinates: Hashable, Codable {
     var latitude: Double
     var longitude: Double
