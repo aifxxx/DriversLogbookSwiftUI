@@ -13,12 +13,21 @@ struct TripCard: View {
 
     var body: some View {
         ZStack (alignment: .topLeading) {
+            
+            
+            
         
 //Background
         RoundedRectangle(cornerRadius: 4)
         .frame(width: 335, height: 187)
         .foregroundColor(Color.white)
         .shadow(color: Color.gray.opacity(0.5), radius: 7, x: 0, y: 0)
+            
+            if trip.activeDays > 0 {
+                ActiveTripMarker()
+                .frame(width: 10, height: 187, alignment: .leading)
+            }
+            
             
             VStack (alignment: .leading){
 
@@ -51,7 +60,7 @@ struct TripCard: View {
                     
                     
                 }.frame(width: 305, alignment: .center)
-                    .padding(.leading, 3)
+                    .padding(.leading, 8)
                 
                 
 //Adresses
@@ -70,13 +79,13 @@ struct TripCard: View {
                     
                     }
                 }.frame(width: 305, alignment: .leading)
-                    .padding(.leading, 10)
+                    .padding(.leading, 14)
                 
                 HStack {
                         Image("distance")
                         Text("\(trip.distance) km")
                         .font(.custom("PorscheNext-SemiBold", size: 16))
-                }.padding(.leading, 5)
+                }.padding(.leading, 8)
                 
                 //                            .font(.custom("PorscheNext-SemiBold", size: 18))
             }.frame(width: 335, height: 187)
