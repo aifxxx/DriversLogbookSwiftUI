@@ -37,6 +37,8 @@ struct RadioButtonField: View {
         self.callback = callback
     }
     
+    
+    
     var body: some View {
         Button(action: {
             self.callback(self.id)
@@ -66,9 +68,14 @@ enum Category: String {
 }
 
 struct RadioButtonGroup: View {
+    
     let callback: (String) -> ()
     
     @State var selectedID: String = ""
+    
+    //@State var trip: Trip
+    
+    
     var body: some View {
         VStack {
             radioPrivateMajority
@@ -81,11 +88,14 @@ struct RadioButtonGroup: View {
         RadioButtonField (id: Category.privateTrip.rawValue, label: Category.privateTrip.rawValue, isMarked: selectedID == Category.privateTrip.rawValue ? true:
             false,
             callback: radioGroupCallback)
-            
+
+        
 }
     
     var radioBusinessMajority: some View {
-            RadioButtonField (id: Category.businessTrip.rawValue, label: Category.businessTrip.rawValue, isMarked: selectedID == Category.businessTrip.rawValue ? true:
+            RadioButtonField (id: Category.businessTrip.rawValue, label: Category.businessTrip.rawValue, isMarked:
+    
+                selectedID == Category.businessTrip.rawValue ? true:
                 false,
                 callback: radioGroupCallback)
                 
@@ -108,6 +118,7 @@ struct RadioButtonGroup: View {
 struct MainView: View {
     var body: some View {
             RadioButtonGroup { selected in
+                
                 print("Selected item: \(selected)")
             }
     }

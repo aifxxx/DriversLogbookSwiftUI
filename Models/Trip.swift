@@ -21,6 +21,8 @@ struct Trip: Hashable, Codable, Identifiable{
     var endAddress: String
     var distance: Int
     
+
+    
     var startLocationCoordinates: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: startLocation.latitude, longitude: startLocation.longitude)

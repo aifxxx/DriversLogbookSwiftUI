@@ -9,8 +9,14 @@
 import SwiftUI
 
 struct TabBar: View {
+    
+    @State var selectedTab = 0
+    
+    
+    
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             Home()
                 .tabItem {
                     Image("Home")
@@ -18,7 +24,7 @@ struct TabBar: View {
                     
                     
             }.tag(0)
-            TripList()
+            FullTripListView()
                 .tabItem {
                     Image("TripList")
                     Text("Deine Fahrten")

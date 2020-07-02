@@ -8,44 +8,165 @@
 
 import SwiftUI
 
-struct TripList: View {
-    
+
+//TripList Descending
+struct TripListDescending: View {
     //Custom Styling
     init() {
         //remove divider from List
         UITableView.appearance().separatorColor = .clear
+        
+        //remove section gray background
+        UITableView.appearance().backgroundColor = .clear
+        
     }
+    
     
     var body: some View {
         
-        
-        NavigationView {
-            List(tripData) { trip in
-                ZStack (alignment: .center){
-                TripCard(trip: trip)
-                NavigationLink(destination: TripDetail(trip: trip)) {
-                    TripCard(trip: trip)
+            List {
+                ForEach(sortedDescending) { trip in
+                    Section(header: Text(trip.date)) {
+                        ZStack (alignment: .center){
+                        TripCard(trip: trip)
+                        NavigationLink(destination: TripDetail(trip: trip)) {
+                            TripCard(trip: trip)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 0)
+                        .opacity(0)
+                        
+                        }
+                            .frame(width: 335, height: 187, alignment: .center)
+                        
+                    }.font(.custom("PorscheNext-SemiBold", size: 20))
+                        .foregroundColor(.black)
                 }
-                .buttonStyle(PlainButtonStyle())
-                .frame(width: 0)
-                .opacity(0)
-                
-                }.frame(width: 335, height: 187, alignment: .center)
-            }.navigationBarTitle(Text("Deine Fahrten"))
-            
-        }
-            .frame(width: 355, height: 500, alignment: .center)
-            
+            }
+            .listStyle(GroupedListStyle())
+        
         }
     }
 
 
-struct LandmarkList_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
-            TripList()
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
+//TripList Ascending
+struct TripListAscending: View {
+//Custom Styling
+init() {
+    //remove divider from List
+    UITableView.appearance().separatorColor = .clear
+    
+    //remove section gray background
+    UITableView.appearance().backgroundColor = .clear
+}
+
+var body: some View {
+    
+        List {
+            ForEach(sortedAscending) { trip in
+                Section(header: Text(trip.date)) {
+                    ZStack (alignment: .center){
+                    TripCard(trip: trip)
+                    NavigationLink(destination: TripDetail(trip: trip)) {
+                        TripCard(trip: trip)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .frame(width: 0)
+                    .opacity(0)
+                    
+                    }.frame(width: 335, height: 187, alignment: .center)
+                    
+                }.font(.custom("PorscheNext-SemiBold", size: 20))
+                    .foregroundColor(.black)
+            }
         }
+        .listStyle(GroupedListStyle())
+    
+    }
+}
+
+
+
+//TripList Status
+struct TripListStatus: View {
+
+//Custom Styling
+init() {
+    //remove divider from List
+    UITableView.appearance().separatorColor = .clear
+    
+    //remove section gray background
+    UITableView.appearance().backgroundColor = .clear
+}
+
+var body: some View {
+    
+        List {
+            ForEach(sortedStatus) { trip in
+                Section(header: Text(trip.date)) {
+                    ZStack (alignment: .center){
+                    TripCard(trip: trip)
+                    NavigationLink(destination: TripDetail(trip: trip)) {
+                        TripCard(trip: trip)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .frame(width: 0)
+                    .opacity(0)
+                    
+                    }.frame(width: 335, height: 187, alignment: .center)
+                    
+                }.font(.custom("PorscheNext-SemiBold", size: 20))
+                    .foregroundColor(.black)
+            }
+        }
+        .listStyle(GroupedListStyle())
+        
+    
+    }
+}
+
+
+
+//TripList Active
+struct TripListActiveOnly: View {
+
+//Custom Styling
+init() {
+    //remove divider from List
+    UITableView.appearance().separatorColor = .clear
+    
+    //remove section gray background
+    UITableView.appearance().backgroundColor = .clear
+}
+
+var body: some View {
+    
+        List {
+            
+            ForEach(tripData) { trip in
+                    ZStack (alignment: .center){
+                        if trip.activeDays > 0 {
+                            TripCard(trip: trip)
+                            NavigationLink(destination: TripDetail(trip: trip)) {
+                                TripCard(trip: trip)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .frame(width: 0)
+                            .opacity(0)
+                        } else {
+                            EmptyView()
+                        }
+                        
+                    
+                    
+                    }.frame(width: 335, height: 187, alignment: .center)
+                    
+                }.font(.custom("PorscheNext-SemiBold", size: 20))
+                    .foregroundColor(.black)
+            
+        }
+        .listStyle(GroupedListStyle())
+        
+    
     }
 }

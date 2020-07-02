@@ -12,6 +12,7 @@ import MapKit
 //shows details of a single trip selected from the list
 struct TripDetail: View {
     
+    
     //Save Button
     @State var isActive: Bool = false
     
@@ -19,7 +20,11 @@ struct TripDetail: View {
     var tabbaritem = TabBar()
     
     //Trip Instance for data
-    var trip: Trip
+    @State var trip: Trip
+    
+    //Radio Button Selected
+    
+    
     
     //UI starts here
     var body: some View {
@@ -31,20 +36,33 @@ struct TripDetail: View {
                 
                 VStack (alignment: .leading) {
                     
+                    
+                    
                     //Spacer to separate NavBar and main elements
-                    Spacer().padding(.top, 40)
+                    Spacer().padding(.top, 60)
                     
                     //Date and Aktive Days
                     HStack {
                         Text(trip.date)
                             .font(.custom("PorscheNext-SemiBold", size: 20))
-                        Image("active")
-                            .padding(.leading, 52)
+                        if trip.activeDays >= 3 {
+                            Image("active")
+                                .padding(.leading, 52)
+                            
+                        } else if trip.activeDays >= 0 {
+                            Image("active3")
+                                .padding(.leading, 52)
+                            
+                        } else {
+                            Image("active0")
+                                .padding(.leading, 52)
+                            
+                        }
                         Text("Noch \(trip.activeDays) Tage bearbeitbar")
                             .font(.custom("PorscheNext-Thin", size: 12))
                             .foregroundColor(Color.init("FontLight"))
+                        
                     }.padding(.top, -20)
-                    
                     
                     //Card Design from Start to Category
                     ZStack {
@@ -82,27 +100,42 @@ struct TripDetail: View {
                             
                             //Radio Buttons, active: tick
                             RadioButtonGroup { selected in
-                                print("Selected item: \(selected)")
+                                //print("Selected item: \(selected)")
+                                if selected == Category.privateTrip.rawValue {
+                                    self.trip.category = Category.privateTrip.rawValue
+                                }
+                                
+                                
+                                
                             }.padding(.bottom, -10)
-  
+                            
                         }.font(.custom("PorscheNext-Regular", size: 16))
-                            .frame(width: 275, height: 380)
+                            .frame(width: 275, height: 565)
                             .padding(.top, -25)
                     }.padding(.top, -10)
                     
                     //Save Button
-                    NavigationLink(destination: TripList(), isActive: self.$isActive) {
-                        Button("Fahrt speichern") {
-                            self.isActive = true
-                        }.frame(width: 295, height: 48)
-                            .foregroundColor(.white)
-                            .background(Color.init("PorscheRot"))
+                    NavigationLink(destination: TabBar(selectedTab: 1)) {
+                        ZStack{
+                            Rectangle()
+                            .frame(width: 295, height: 48)
+                                .background(Color.init("PorscheRot"))
+                                .foregroundColor(Color.init("PorscheRot"))
+                            Text("Fahrt speichern")
+                                .foregroundColor(.white)
                             .font(.custom("PorscheNext-Regular", size: 16))
-                            .padding(.top, 5)
-                            .padding(.bottom, 30)
+                        }
+                        
+                        .padding(.top, 5)
+                        .padding(.bottom, 100)
+                        
                     }
-                }.padding()
+                    
+                    
+                }
+                .padding()
                     .navigationBarTitle(" ", displayMode: .inline)
+            
             }
         }.padding(-40)
         

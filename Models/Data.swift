@@ -10,8 +10,25 @@ import UIKit
 import SwiftUI
 import CoreLocation
 
-let tripData: [Trip] = load("TripData.json")
+var tripData: [Trip] = load("TripData.json")
 let userData: [User] = load("User.json")
+
+
+
+//Sortierung alte zuerst
+let sortedDescending = tripData.sorted{
+    $0.date > $1.date
+}
+
+let sortedAscending = tripData.sorted {
+    $0.date < $1.date
+}
+
+let sortedStatus = tripData.sorted {
+    $0.activeDays < $1.activeDays
+}
+
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
