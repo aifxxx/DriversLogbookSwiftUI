@@ -48,10 +48,16 @@ struct BarGraph: View {
                         }.frame(maxWidth: .infinity)
                     }
                             Image("Line")
-                                .padding(.leading, 26)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(.leading, 20)
+                                .padding(.trailing, 18)
                                 .padding(.top, 10)
                                 .padding(.bottom, -30)
-                    }.padding(.bottom, 35.0)
+                    }
+            .padding(.bottom, 35.0)
+            .frame(width: 375)
+            
                    
                 
                 VStack (alignment: .leading) {
@@ -119,8 +125,6 @@ struct BarGraph: View {
                             .font(.custom("PorscheNext-Thin", size: 12))
                             .padding(.leading, 200)
                             
-                            Image("Line")
-                                .padding(.leading, -60)
                             
                         
                         
@@ -128,7 +132,7 @@ struct BarGraph: View {
                             
                     
                     
-                }
+        }
                 
                 }
                     }
@@ -146,13 +150,26 @@ struct Bar: View {
     var percent: Int = 0
     var category = ""
     
+    @State var animate = false
+    
+    
     var body: some View {
         HStack {
             ZStack (alignment: .leading){
                 Rectangle().fill(Color.init("BarLight"))
                     .frame(width: 290, height: 10)
+                
+                
                     Rectangle().fill(Color.init("BarDark"))
-                        .frame(width: CGFloat(percent), height: 10)
+                        .frame(width: self.animate ? CGFloat(percent) : 0, height: 10)
+                .animation(Animation.linear(duration: 1).delay(1))
+                .onAppear{
+                
+                
+                return withAnimation(){
+                    self.animate = true
+                }
+                }
 
             }
 

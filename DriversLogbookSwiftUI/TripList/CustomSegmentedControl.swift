@@ -14,7 +14,6 @@ struct CustomSegmentedControl: View {
     
     var body: some View {
         
-    
             HStack {
                 
             //Segment 1

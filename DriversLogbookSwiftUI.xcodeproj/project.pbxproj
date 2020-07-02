@@ -41,7 +41,6 @@
 		0D42902E249BAFFE000814A5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42902D249BAFFE000814A5 /* Profile.swift */; };
 		0D429031249C964B000814A5 /* BackgroundPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429030249C964B000814A5 /* BackgroundPrivate.swift */; };
 		0D429033249CD6D2000814A5 /*  RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429032249CD6D1000814A5 /*  RadioButton.swift */; };
-		0D429035249CEB25000814A5 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429034249CEB25000814A5 /* RadioButtonGroup.swift */; };
 		0DADB62224A62C5B0041B8EC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62124A62C5B0041B8EC /* MapView.swift */; };
 		0DADB62524A9CA960041B8EC /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62424A9CA960041B8EC /* CustomSegmentedControl.swift */; };
 		0DADB62924A9CEF30041B8EC /* FullTripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62824A9CEF30041B8EC /* FullTripListView.swift */; };
@@ -107,7 +106,6 @@
 		0D42902D249BAFFE000814A5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		0D429030249C964B000814A5 /* BackgroundPrivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundPrivate.swift; sourceTree = "<group>"; };
 		0D429032249CD6D1000814A5 /*  RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RadioButton.swift"; sourceTree = "<group>"; };
-		0D429034249CEB25000814A5 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
 		0DADB62124A62C5B0041B8EC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0DADB62424A9CA960041B8EC /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		0DADB62824A9CEF30041B8EC /* FullTripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTripListView.swift; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 			children = (
 				0D429030249C964B000814A5 /* BackgroundPrivate.swift */,
 				0D429032249CD6D1000814A5 /*  RadioButton.swift */,
-				0D429034249CEB25000814A5 /* RadioButtonGroup.swift */,
 				0DADB62124A62C5B0041B8EC /* MapView.swift */,
 				0DADB62C24AA196D0041B8EC /* TryRadioButton.swift */,
 			);
@@ -457,7 +454,6 @@
 				0D429033249CD6D2000814A5 /*  RadioButton.swift in Sources */,
 				0DADB62524A9CA960041B8EC /* CustomSegmentedControl.swift in Sources */,
 				0D429029249BA6F9000814A5 /* BarGraph.swift in Sources */,
-				0D429035249CEB25000814A5 /* RadioButtonGroup.swift in Sources */,
 				0D429000249B681D000814A5 /* Trip.swift in Sources */,
 				0D428FB9249A1FF6000814A5 /* AppDelegate.swift in Sources */,
 				0D42902E249BAFFE000814A5 /* Profile.swift in Sources */,
