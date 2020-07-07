@@ -10,17 +10,21 @@ import SwiftUI
 
 struct FullTripListView: View {
     @State var selected = 0
+    @ObservedObject var dataViewModel: DataViewModel = DataViewModel()
+
+    init() {
+        dataViewModel.fetch()
+    }
     var body: some View {
         NavigationView {
             VStack () {
                 CustomSegmentedControl(selected: self.$selected)
-                
                 if self.selected == 0 {
-                    TripListDescending()
+                    TripList(trips: $dataViewModel.tripData)
                 } else if self.selected == 1 {
-                    TripListAscending()
+                    TripList(trips: $dataViewModel.tripDataSortedAscending)
                 } else {
-                    TripListStatus()
+                    TripList(trips: $dataViewModel.tripDataSortedStaus)
                 }
             }.background(Color("Color").edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Deine Fahrten")

@@ -11,33 +11,21 @@ import MapKit
 
 //shows details of a single trip selected from the list
 struct TripDetail: View {
-    
-    
-    //Save Button
-    @State var isActive: Bool = false
-    
     //Tabbar Try
     var tabbaritem = TabBar()
     
-    //Trip Instance for data
-    @State var trip: Trip
-    
+    // Trip Instance for data
+    @Binding var trip: Trip
+
     //Radio Button Selected
-    
-    
-    
+
     //UI starts here
     var body: some View {
         
         //NavigationBar: NavigationBarBackButton, no title
         NavigationView {
-            
             ScrollView {
-                
                 VStack (alignment: .leading) {
-                    
-                    
-                    
                     //Spacer to separate NavBar and main elements
                     Spacer().padding(.top, 60)
                     
@@ -99,14 +87,9 @@ struct TripDetail: View {
                                 .bold()
                             
                             //Radio Buttons, active: tick
-                            RadioButtonGroup { selected in
+                            RadioButtonGroup(selectedID: $trip.category) { selected in
                                 //print("Selected item: \(selected)")
-                                if selected == Category.privateTrip.rawValue {
-                                    self.trip.category = Category.privateTrip.rawValue
-                                }
-                                
-                                
-                                
+//                                self.trip.category = selected
                             }.padding(.bottom, -10)
                             
                         }.font(.custom("PorscheNext-Regular", size: 16))
@@ -130,21 +113,16 @@ struct TripDetail: View {
                         .padding(.bottom, 100)
                         
                     }
-                    
-                    
                 }
                 .padding()
                     .navigationBarTitle(" ", displayMode: .inline)
-            
             }
         }.padding(-40)
-        
-        
     }
 }
 
 struct TripDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TripDetail(trip: tripData[0])
+        TripDetail(trip: .constant(tripData[0]))
     }
 }

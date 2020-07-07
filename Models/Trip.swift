@@ -9,7 +9,7 @@
 import SwiftUI
 import CoreLocation
 
-struct Trip: Hashable, Codable, Identifiable{
+struct Trip: Hashable, Codable, Identifiable {
 
     var id: Int
     var date: String

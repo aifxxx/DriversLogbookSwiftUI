@@ -36,9 +36,7 @@ struct RadioButtonField: View {
         self.isMarked = isMarked
         self.callback = callback
     }
-    
-    
-    
+
     var body: some View {
         Button(action: {
             self.callback(self.id)
@@ -68,10 +66,9 @@ enum Category: String {
 }
 
 struct RadioButtonGroup: View {
-    
+
+    @Binding var selectedID: String
     let callback: (String) -> ()
-    
-    @State var selectedID: String = ""
 
     var body: some View {
         VStack {
@@ -82,47 +79,44 @@ struct RadioButtonGroup: View {
     }
     
     var radioPrivateMajority: some View {
-        RadioButtonField (id: Category.privateTrip.rawValue, label: Category.privateTrip.rawValue, isMarked: selectedID == Category.privateTrip.rawValue ? true:
-            false,
-            callback: radioGroupCallback)
-
-        
+        RadioButtonField (id: Category.privateTrip.rawValue,
+                          label: Category.privateTrip.rawValue,
+                          isMarked: selectedID == Category.privateTrip.rawValue,
+                          callback: radioGroupCallback)
 }
     
     var radioBusinessMajority: some View {
-            RadioButtonField (id: Category.businessTrip.rawValue, label: Category.businessTrip.rawValue, isMarked:
-    
-                selectedID == Category.businessTrip.rawValue ? true:
-                false,
-                callback: radioGroupCallback)
+            RadioButtonField (id: Category.businessTrip.rawValue,
+                              label: Category.businessTrip.rawValue,
+                              isMarked: selectedID == Category.businessTrip.rawValue,
+                              callback: radioGroupCallback)
                 
     }
     
     var radioCommuteMajority: some View {
-            RadioButtonField (id: Category.commute.rawValue, label: Category.commute.rawValue, isMarked: selectedID == Category.commute.rawValue ? true:
-                false,
-                callback: radioGroupCallback)
-                
+            RadioButtonField (id: Category.commute.rawValue,
+                              label: Category.commute.rawValue,
+                              isMarked: selectedID == Category.commute.rawValue,
+                              callback: radioGroupCallback)
     }
-    
-    
+
     func radioGroupCallback(id: String) {
         selectedID = id
         callback(id)
     }
 }
 
-struct MainView: View {
-    var body: some View {
-            RadioButtonGroup { selected in
-                
-                print("Selected item: \(selected)")
-            }
-    }
-}
-
-struct RadioButtonField_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView: View {
+//    var body: some View {
+//            RadioButtonGroup { selected in
+//                
+//                print("Selected item: \(selected)")
+//            }
+//    }
+//}
+//
+//struct RadioButtonField_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}

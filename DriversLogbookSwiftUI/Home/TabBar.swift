@@ -11,10 +11,7 @@ import SwiftUI
 struct TabBar: View {
     
     @State var selectedTab = 0
-    
-    
-    
-    
+
     var body: some View {
         TabView(selection: $selectedTab) {
             Home()
