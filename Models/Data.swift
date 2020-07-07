@@ -15,8 +15,7 @@ import CoreLocation
 var tripData: [Trip] = load("TripData.json")
 let userData: [User] = load("User.json")
 
-
-//Sortierung alte zuerst
+// Sortierung alte zuerst
 let sortedDescending = tripData.sorted{
     $0.date > $1.date
 }

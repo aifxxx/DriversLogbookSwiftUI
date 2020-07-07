@@ -72,10 +72,7 @@ struct RadioButtonGroup: View {
     let callback: (String) -> ()
     
     @State var selectedID: String = ""
-    
-    //@State var trip: Trip
-    
-    
+
     var body: some View {
         VStack {
             radioPrivateMajority

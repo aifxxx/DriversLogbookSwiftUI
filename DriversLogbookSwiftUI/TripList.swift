@@ -23,11 +23,10 @@ struct TripListDescending: View {
     
     
     var body: some View {
-        
-            List {
-                ForEach(sortedDescending) { trip in
-                    Section(header: Text(trip.date)) {
-                        ZStack (alignment: .center){
+        List {
+            ForEach(sortedDescending) { trip in
+                Section(header: Text(trip.date)) {
+                    ZStack (alignment: .center){
                         TripCard(trip: trip)
                         NavigationLink(destination: TripDetail(trip: trip)) {
                             TripCard(trip: trip)
@@ -36,52 +35,52 @@ struct TripListDescending: View {
                         .frame(width: 0)
                         .opacity(0)
                         
-                        }
-                            .frame(width: 335, height: 187, alignment: .center)
-                        
-                    }.font(.custom("PorscheNext-SemiBold", size: 20))
-                        .foregroundColor(.black)
-                }
+                    }
+                    .frame(width: 335, height: 187, alignment: .center)
+
+                }.font(.custom("PorscheNext-SemiBold", size: 20))
+                .foregroundColor(.black)
             }
-            .listStyle(GroupedListStyle())
-        
         }
+        .listStyle(GroupedListStyle())
+        
     }
+}
 
 
 //TripList Ascending
 struct TripListAscending: View {
-//Custom Styling
-init() {
-    //remove divider from List
-    UITableView.appearance().separatorColor = .clear
-    
-    //remove section gray background
-    UITableView.appearance().backgroundColor = .clear
-}
+    //Custom Styling
+    init() {
+        //remove divider from List
+        UITableView.appearance().separatorColor = .clear
 
-var body: some View {
-    
+        //remove section gray background
+        UITableView.appearance().backgroundColor = .clear
+    }
+
+    var body: some View {
+
         List {
             ForEach(sortedAscending) { trip in
                 Section(header: Text(trip.date)) {
                     ZStack (alignment: .center){
-                    TripCard(trip: trip)
-                    NavigationLink(destination: TripDetail(trip: trip)) {
                         TripCard(trip: trip)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .frame(width: 0)
-                    .opacity(0)
-                    
+                        NavigationLink(destination: TripDetail(trip: trip)) {
+                            TripCard(trip: trip)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 0)
+                        .opacity(0)
+
                     }.frame(width: 335, height: 187, alignment: .center)
                     
                 }.font(.custom("PorscheNext-SemiBold", size: 20))
-                    .foregroundColor(.black)
+                .foregroundColor(.black)
             }
         }
         .listStyle(GroupedListStyle())
-    
+
     }
 }
 
@@ -90,38 +89,38 @@ var body: some View {
 //TripList Status
 struct TripListStatus: View {
 
-//Custom Styling
-init() {
-    //remove divider from List
-    UITableView.appearance().separatorColor = .clear
-    
-    //remove section gray background
-    UITableView.appearance().backgroundColor = .clear
-}
+    //Custom Styling
+    init() {
+        //remove divider from List
+        UITableView.appearance().separatorColor = .clear
 
-var body: some View {
-    
+        //remove section gray background
+        UITableView.appearance().backgroundColor = .clear
+    }
+
+    var body: some View {
+
         List {
             ForEach(sortedStatus) { trip in
                 Section(header: Text(trip.date)) {
                     ZStack (alignment: .center){
-                    TripCard(trip: trip)
-                    NavigationLink(destination: TripDetail(trip: trip)) {
                         TripCard(trip: trip)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .frame(width: 0)
-                    .opacity(0)
-                    
+                        NavigationLink(destination: TripDetail(trip: trip)) {
+                            TripCard(trip: trip)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 0)
+                        .opacity(0)
+
                     }.frame(width: 335, height: 187, alignment: .center)
                     
                 }.font(.custom("PorscheNext-SemiBold", size: 20))
-                    .foregroundColor(.black)
+                .foregroundColor(.black)
             }
         }
         .listStyle(GroupedListStyle())
         
-    
+
     }
 }
 
@@ -130,43 +129,43 @@ var body: some View {
 //TripList Active
 struct TripListActiveOnly: View {
 
-//Custom Styling
-init() {
-    //remove divider from List
-    UITableView.appearance().separatorColor = .clear
-    
-    //remove section gray background
-    UITableView.appearance().backgroundColor = .clear
-}
+    //Custom Styling
+    init() {
+        //remove divider from List
+        UITableView.appearance().separatorColor = .clear
 
-var body: some View {
-    
+        //remove section gray background
+        UITableView.appearance().backgroundColor = .clear
+    }
+
+    var body: some View {
+
         List {
             
             ForEach(tripData) { trip in
-                    ZStack (alignment: .center){
-                        if trip.activeDays > 0 {
+                ZStack (alignment: .center){
+                    if trip.activeDays > 0 {
+                        TripCard(trip: trip)
+                        NavigationLink(destination: TripDetail(trip: trip)) {
                             TripCard(trip: trip)
-                            NavigationLink(destination: TripDetail(trip: trip)) {
-                                TripCard(trip: trip)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                            .frame(width: 0)
-                            .opacity(0)
-                        } else {
-                            EmptyView()
                         }
-                        
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: 0)
+                        .opacity(0)
+                    } else {
+                        EmptyView()
+                    }
+
                     
                     
-                    }.frame(width: 335, height: 187, alignment: .center)
-                    
-                }.font(.custom("PorscheNext-SemiBold", size: 20))
-                    .foregroundColor(.black)
+                }.frame(width: 335, height: 187, alignment: .center)
+
+            }.font(.custom("PorscheNext-SemiBold", size: 20))
+            .foregroundColor(.black)
             
         }
         .listStyle(GroupedListStyle())
         
-    
+
     }
 }
