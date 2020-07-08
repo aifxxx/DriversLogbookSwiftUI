@@ -10,13 +10,11 @@ import SwiftUI
 
 struct Home: View {
     
-    //var user: User
-    
-    
+    @EnvironmentObject var tripViewModel: DataViewModel
+
     var body: some View {
         NavigationView {
             ScrollView {
-
                 VStack (alignment: .leading){
                     Text("Deine Übersicht")
                         .font(.custom("PorscheNext-SemiBold", size: 20))
@@ -36,14 +34,14 @@ struct Home: View {
                     //Aktive Fahrten hier
 
                     VStack {
-                        ForEach(tripData.indices) { index in
-                            let trip = tripData[index]
+                        ForEach(tripViewModel.tripData.indices) { index in
+                            let trip = tripViewModel.tripData[index]
                             ZStack (alignment: .center){
                                 if trip.activeDays > 0 {
                                     TripCard(trip: trip)
-//                                    NavigationLink(destination: TripDetail(trip: trip)) {
-//                                        TripCard(trip: trip)
-//                                    }
+                                    NavigationLink(destination: TripDetail(trip: $tripViewModel.tripData[index])) {
+                                        TripCard(trip: trip)
+                                    }
                                     .buttonStyle(PlainButtonStyle())
                                     .frame(width: 0)
                                     .opacity(0)
@@ -56,14 +54,13 @@ struct Home: View {
                     .foregroundColor(.black)
                     .padding(.leading, 20)
 
-
                     Spacer()
                     Text("Alle Fahrten findest du unter Fahrtenbuch")
                         .font(.custom("PorscheNext-Thin", size: 16))
                         .padding(.leading, 20)
                         .padding(.top, 20)
 
-                }.navigationBarTitle(Text("Hallo!").font(.subheadline), displayMode: .large)
+                }.navigationBarTitle(Text("Hallo!"), displayMode: .large)
             }
         }
     }

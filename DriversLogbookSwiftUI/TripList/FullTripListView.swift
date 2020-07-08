@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FullTripListView: View {
     @State var selected = 0
-    @ObservedObject var dataViewModel: DataViewModel = DataViewModel()
+    @EnvironmentObject var dataViewModel: DataViewModel
 
     var body: some View {
         NavigationView {
