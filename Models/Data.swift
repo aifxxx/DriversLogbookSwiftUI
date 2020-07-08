@@ -10,13 +10,14 @@ import UIKit
 import SwiftUI
 import CoreLocation
 
-
+class DataViewModel: ObservableObject {
+    @Published var tripData: [Trip] = load("TripData.json")
+}
 
 var tripData: [Trip] = load("TripData.json")
 let userData: [User] = load("User.json")
 
-
-//Sortierung alte zuerst
+// Sortierung alte zuerst
 let sortedDescending = tripData.sorted{
     $0.date > $1.date
 }

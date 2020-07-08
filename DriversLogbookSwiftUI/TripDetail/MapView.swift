@@ -13,10 +13,7 @@ struct MapView: UIViewRepresentable {
     
     //Trip Instance for data
     var trip: Trip
-    
 
-    
-    
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
         
@@ -27,21 +24,13 @@ struct MapView: UIViewRepresentable {
         func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
             print(mapView.centerCoordinate)
         }
-        
-        
     }
-    
-    
+
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
         
     }
-    
-    
-    
-    
-    
-    
+
     func zoomToFitMapAnnotations(mapView:MKMapView)
     {
         if(mapView.annotations.count == 0)
@@ -49,12 +38,9 @@ struct MapView: UIViewRepresentable {
               return
         }
 
-
         var topLeftCoord = CLLocationCoordinate2D.init(latitude: -90, longitude: 180)
 
-
         var bottomRightCoord = CLLocationCoordinate2D.init(latitude: 90, longitude: -180)
-
 
         for i in 0..<mapView.annotations.count
         {

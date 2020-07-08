@@ -13,10 +13,6 @@ struct TripCard: View {
 
     var body: some View {
         ZStack (alignment: .topLeading) {
-            
-            
-            
-        
 //Background
         RoundedRectangle(cornerRadius: 4)
         .frame(width: 335, height: 187)
@@ -27,10 +23,7 @@ struct TripCard: View {
                 ActiveTripMarker()
                 .frame(width: 10, height: 187, alignment: .leading)
             }
-            
-            
             VStack (alignment: .leading){
-
 //Category and active status
                 HStack (alignment: .center){
 //Category Icon
@@ -61,8 +54,6 @@ struct TripCard: View {
                     
                 }.frame(width: 305, alignment: .center)
                     .padding(.leading, 8)
-                
-                
 //Adresses
                 HStack () {
                         Image("route")

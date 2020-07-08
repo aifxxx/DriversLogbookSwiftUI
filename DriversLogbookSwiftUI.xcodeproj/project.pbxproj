@@ -18,21 +18,9 @@
 		0D428FDE249A1FF8000814A5 /* DriversLogbookSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D428FDD249A1FF8000814A5 /* DriversLogbookSwiftUIUITests.swift */; };
 		0D428FFE249B6812000814A5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D428FFD249B6812000814A5 /* Data.swift */; };
 		0D429000249B681D000814A5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D428FFF249B681D000814A5 /* Trip.swift */; };
-		0D429002249B6A30000814A5 /* TripData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D429001249B6A30000814A5 /* TripData.json */; };
 		0D429004249B6AB2000814A5 /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429003249B6AB2000814A5 /* TripList.swift */; };
 		0D429006249B6B5A000814A5 /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429005249B6B5A000814A5 /* TripDetail.swift */; };
 		0D429008249B6C0C000814A5 /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429007249B6C0B000814A5 /* TripCard.swift */; };
-		0D42900A249B80D3000814A5 /* distance.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D429009249B80D3000814A5 /* distance.png */; };
-		0D42900C249B80DD000814A5 /* business.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D42900B249B80DD000814A5 /* business.png */; };
-		0D42900E249B80E3000814A5 /* private.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D42900D249B80E3000814A5 /* private.png */; };
-		0D429010249B80E9000814A5 /* route.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D42900F249B80E9000814A5 /* route.png */; };
-		0D429012249B80EF000814A5 /* uncategorised.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D429011249B80EF000814A5 /* uncategorised.png */; };
-		0D429014249B80F5000814A5 /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D429013249B80F5000814A5 /* active.png */; };
-		0D429016249B8134000814A5 /* commute.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D429015249B8134000814A5 /* commute.png */; };
-		0D42901D249B8363000814A5 /* PorscheNext-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D429019249B82F8000814A5 /* PorscheNext-Bold.otf */; };
-		0D42901E249B8367000814A5 /* PorscheNext-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D42901B249B82F8000814A5 /* PorscheNext-Regular.otf */; };
-		0D42901F249B836C000814A5 /* PorscheNext-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D42901A249B82F8000814A5 /* PorscheNext-SemiBold.otf */; };
-		0D429020249B8370000814A5 /* PorscheNext-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D42901C249B82F8000814A5 /* PorscheNext-Thin.otf */; };
 		0D429023249B9CAE000814A5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429022249B9CAE000814A5 /* Home.swift */; };
 		0D429025249B9D06000814A5 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D429024249B9D06000814A5 /* User.json */; };
 		0D429027249B9D95000814A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429026249B9D95000814A5 /* User.swift */; };
@@ -40,7 +28,7 @@
 		0D42902B249BABD3000814A5 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42902A249BABD3000814A5 /* TabBar.swift */; };
 		0D42902E249BAFFE000814A5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42902D249BAFFE000814A5 /* Profile.swift */; };
 		0D429031249C964B000814A5 /* BackgroundPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429030249C964B000814A5 /* BackgroundPrivate.swift */; };
-		0D429033249CD6D2000814A5 /*  RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429032249CD6D1000814A5 /*  RadioButton.swift */; };
+		0D429033249CD6D2000814A5 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D429032249CD6D1000814A5 /* RadioButton.swift */; };
 		0DADB62224A62C5B0041B8EC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62124A62C5B0041B8EC /* MapView.swift */; };
 		0DADB62524A9CA960041B8EC /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62424A9CA960041B8EC /* CustomSegmentedControl.swift */; };
 		0DADB62924A9CEF30041B8EC /* FullTripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62824A9CEF30041B8EC /* FullTripListView.swift */; };
@@ -49,6 +37,14 @@
 		0DADB67424AE17020041B8EC /* ActiveTripMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB67324AE17020041B8EC /* ActiveTripMarker.swift */; };
 		0DADB67624AF15990041B8EC /* CalculateBarGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB67524AF15990041B8EC /* CalculateBarGraphData.swift */; };
 		0DADB67A24B4BB630041B8EC /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB67924B4BB630041B8EC /* Launch.swift */; };
+		D0A08ED824B46A02002E073E /* PorscheNext-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A08ED224B46A02002E073E /* PorscheNext-BoldItalic.otf */; };
+		D0A08ED924B46A02002E073E /* PorscheNext-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A08ED324B46A02002E073E /* PorscheNext-Italic.otf */; };
+		D0A08EDA24B46A02002E073E /* PorscheNext-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A08ED424B46A02002E073E /* PorscheNext-Thin.otf */; };
+		D0A08EDB24B46A02002E073E /* PorscheNext-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A08ED524B46A02002E073E /* PorscheNext-Regular.otf */; };
+		D0A08EDC24B46A02002E073E /* PorscheNext-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A08ED624B46A02002E073E /* PorscheNext-ThinItalic.otf */; };
+		D0A08EDD24B46A02002E073E /* PorscheNext-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A08ED724B46A02002E073E /* PorscheNext-Bold.otf */; };
+		D0A08EDF24B46A56002E073E /* PorscheNext-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0A08EDE24B46A56002E073E /* PorscheNext-SemiBold.otf */; };
+		D0B0558224B4668200E89707 /* TripData.json in Resources */ = {isa = PBXBuildFile; fileRef = D0B0558124B4668200E89707 /* TripData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,21 +82,9 @@
 		0D428FDF249A1FF8000814A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D428FFD249B6812000814A5 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		0D428FFF249B681D000814A5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		0D429001249B6A30000814A5 /* TripData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TripData.json; path = "../../Duplizierte Version/shadowTry/Resources/TripData.json"; sourceTree = "<group>"; };
 		0D429003249B6AB2000814A5 /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
 		0D429005249B6B5A000814A5 /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		0D429007249B6C0B000814A5 /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
-		0D429009249B80D3000814A5 /* distance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = distance.png; path = ../../Icons/Cards/distance.png; sourceTree = "<group>"; };
-		0D42900B249B80DD000814A5 /* business.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = business.png; path = ../../Icons/Cards/business.png; sourceTree = "<group>"; };
-		0D42900D249B80E3000814A5 /* private.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = private.png; path = ../../Icons/Cards/private.png; sourceTree = "<group>"; };
-		0D42900F249B80E9000814A5 /* route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = route.png; path = ../../Icons/Cards/route.png; sourceTree = "<group>"; };
-		0D429011249B80EF000814A5 /* uncategorised.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uncategorised.png; path = ../../Icons/Cards/uncategorised.png; sourceTree = "<group>"; };
-		0D429013249B80F5000814A5 /* active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active.png; path = ../../Icons/Cards/active.png; sourceTree = "<group>"; };
-		0D429015249B8134000814A5 /* commute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = commute.png; path = ../../Icons/Cards/commute.png; sourceTree = "<group>"; };
-		0D429019249B82F8000814A5 /* PorscheNext-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PorscheNext-Bold.otf"; path = "../../Fonts/PorscheNext-Bold.otf"; sourceTree = "<group>"; };
-		0D42901A249B82F8000814A5 /* PorscheNext-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PorscheNext-SemiBold.otf"; path = "../../Fonts/PorscheNext-SemiBold.otf"; sourceTree = "<group>"; };
-		0D42901B249B82F8000814A5 /* PorscheNext-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PorscheNext-Regular.otf"; path = "../../Fonts/PorscheNext-Regular.otf"; sourceTree = "<group>"; };
-		0D42901C249B82F8000814A5 /* PorscheNext-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PorscheNext-Thin.otf"; path = "../../Fonts/PorscheNext-Thin.otf"; sourceTree = "<group>"; };
 		0D429022249B9CAE000814A5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0D429024249B9D06000814A5 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
 		0D429026249B9D95000814A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -108,7 +92,7 @@
 		0D42902A249BABD3000814A5 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		0D42902D249BAFFE000814A5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		0D429030249C964B000814A5 /* BackgroundPrivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundPrivate.swift; sourceTree = "<group>"; };
-		0D429032249CD6D1000814A5 /*  RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RadioButton.swift"; sourceTree = "<group>"; };
+		0D429032249CD6D1000814A5 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		0DADB62124A62C5B0041B8EC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0DADB62424A9CA960041B8EC /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		0DADB62824A9CEF30041B8EC /* FullTripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTripListView.swift; sourceTree = "<group>"; };
@@ -117,6 +101,14 @@
 		0DADB67324AE17020041B8EC /* ActiveTripMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTripMarker.swift; sourceTree = "<group>"; };
 		0DADB67524AF15990041B8EC /* CalculateBarGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateBarGraphData.swift; sourceTree = "<group>"; };
 		0DADB67924B4BB630041B8EC /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		D0A08ED224B46A02002E073E /* PorscheNext-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNext-BoldItalic.otf"; sourceTree = "<group>"; };
+		D0A08ED324B46A02002E073E /* PorscheNext-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNext-Italic.otf"; sourceTree = "<group>"; };
+		D0A08ED424B46A02002E073E /* PorscheNext-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNext-Thin.otf"; sourceTree = "<group>"; };
+		D0A08ED524B46A02002E073E /* PorscheNext-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNext-Regular.otf"; sourceTree = "<group>"; };
+		D0A08ED624B46A02002E073E /* PorscheNext-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNext-ThinItalic.otf"; sourceTree = "<group>"; };
+		D0A08ED724B46A02002E073E /* PorscheNext-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNext-Bold.otf"; sourceTree = "<group>"; };
+		D0A08EDE24B46A56002E073E /* PorscheNext-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNext-SemiBold.otf"; sourceTree = "<group>"; };
+		D0B0558124B4668200E89707 /* TripData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TripData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,15 +211,8 @@
 		0D428FF9249B676B000814A5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0D429001249B6A30000814A5 /* TripData.json */,
+				D0B0558124B4668200E89707 /* TripData.json */,
 				0D429024249B9D06000814A5 /* User.json */,
-				0D429009249B80D3000814A5 /* distance.png */,
-				0D42900B249B80DD000814A5 /* business.png */,
-				0D42900D249B80E3000814A5 /* private.png */,
-				0D429015249B8134000814A5 /* commute.png */,
-				0D42900F249B80E9000814A5 /* route.png */,
-				0D429011249B80EF000814A5 /* uncategorised.png */,
-				0D429013249B80F5000814A5 /* active.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -245,10 +230,13 @@
 		0D429018249B82E5000814A5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0D429019249B82F8000814A5 /* PorscheNext-Bold.otf */,
-				0D42901B249B82F8000814A5 /* PorscheNext-Regular.otf */,
-				0D42901A249B82F8000814A5 /* PorscheNext-SemiBold.otf */,
-				0D42901C249B82F8000814A5 /* PorscheNext-Thin.otf */,
+				D0A08EDE24B46A56002E073E /* PorscheNext-SemiBold.otf */,
+				D0A08ED724B46A02002E073E /* PorscheNext-Bold.otf */,
+				D0A08ED224B46A02002E073E /* PorscheNext-BoldItalic.otf */,
+				D0A08ED324B46A02002E073E /* PorscheNext-Italic.otf */,
+				D0A08ED524B46A02002E073E /* PorscheNext-Regular.otf */,
+				D0A08ED424B46A02002E073E /* PorscheNext-Thin.otf */,
+				D0A08ED624B46A02002E073E /* PorscheNext-ThinItalic.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -276,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				0D429030249C964B000814A5 /* BackgroundPrivate.swift */,
-				0D429032249CD6D1000814A5 /*  RadioButton.swift */,
+				0D429032249CD6D1000814A5 /* RadioButton.swift */,
 				0DADB62124A62C5B0041B8EC /* MapView.swift */,
 				0DADB62C24AA196D0041B8EC /* TryRadioButton.swift */,
 			);
@@ -407,22 +395,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A08ED824B46A02002E073E /* PorscheNext-BoldItalic.otf in Resources */,
 				0D429025249B9D06000814A5 /* User.json in Resources */,
-				0D42901D249B8363000814A5 /* PorscheNext-Bold.otf in Resources */,
+				D0A08EDC24B46A02002E073E /* PorscheNext-ThinItalic.otf in Resources */,
 				0D428FC8249A1FF8000814A5 /* LaunchScreen.storyboard in Resources */,
-				0D429014249B80F5000814A5 /* active.png in Resources */,
-				0D429010249B80E9000814A5 /* route.png in Resources */,
-				0D42901E249B8367000814A5 /* PorscheNext-Regular.otf in Resources */,
-				0D42900E249B80E3000814A5 /* private.png in Resources */,
-				0D42901F249B836C000814A5 /* PorscheNext-SemiBold.otf in Resources */,
-				0D429016249B8134000814A5 /* commute.png in Resources */,
-				0D429020249B8370000814A5 /* PorscheNext-Thin.otf in Resources */,
-				0D429012249B80EF000814A5 /* uncategorised.png in Resources */,
 				0D428FC5249A1FF8000814A5 /* Preview Assets.xcassets in Resources */,
-				0D429002249B6A30000814A5 /* TripData.json in Resources */,
+				D0B0558224B4668200E89707 /* TripData.json in Resources */,
+				D0A08EDF24B46A56002E073E /* PorscheNext-SemiBold.otf in Resources */,
 				0D428FC2249A1FF8000814A5 /* Assets.xcassets in Resources */,
-				0D42900C249B80DD000814A5 /* business.png in Resources */,
-				0D42900A249B80D3000814A5 /* distance.png in Resources */,
+				D0A08EDA24B46A02002E073E /* PorscheNext-Thin.otf in Resources */,
+				D0A08EDD24B46A02002E073E /* PorscheNext-Bold.otf in Resources */,
+				D0A08ED924B46A02002E073E /* PorscheNext-Italic.otf in Resources */,
+				D0A08EDB24B46A02002E073E /* PorscheNext-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DADB62924A9CEF30041B8EC /* FullTripListView.swift in Sources */,
-				0D429033249CD6D2000814A5 /*  RadioButton.swift in Sources */,
+				0D429033249CD6D2000814A5 /* RadioButton.swift in Sources */,
 				0DADB62524A9CA960041B8EC /* CustomSegmentedControl.swift in Sources */,
 				0D429029249BA6F9000814A5 /* BarGraph.swift in Sources */,
 				0D429000249B681D000814A5 /* Trip.swift in Sources */,

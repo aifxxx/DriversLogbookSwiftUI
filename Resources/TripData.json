@@ -1,0 +1,70 @@
+[
+   {
+      "id":1,
+      "date":"15.03.2020",
+      "category":"Arbeitsweg",
+      "activeDays":7,
+      "startLocation":{
+         "longitude":9.224743,
+         "latitude":48.868632
+      },
+      "startAddress":"Bostonring 2, 71686 Remseck am Neckar",
+      "endLocation":{
+         "longitude":9.172938,
+         "latitude":48.893101
+      },
+      "endAddress":"Grönerstraße 9, 71640 Ludwigsburg",
+      "distance":6
+   },
+   {
+      "id":2,
+      "date":"10.03.2020",
+      "category":"Privatfahrt",
+      "activeDays":2,
+      "startLocation":{
+         "longitude":9.173058,
+         "latitude":48.781693
+      },
+      "startAddress":"Grönerstraße 9, 71640 Ludwigsburg",
+      "endLocation":{
+         "longitude":9.218438,
+         "latitude":48.904924
+      },
+      "endAddress":"Schlösslesweg 26, 71640 Ludwigsburg",
+      "distance":5
+   },
+   {
+      "id":3,
+      "date":"14.03.2020",
+      "category":"Geschäftsfahrt",
+      "activeDays":6,
+      "startLocation":{
+         "longitude":9.173058,
+         "latitude":48.781693
+      },
+      "startAddress":"Grönerstraße 9, 71640 Ludwigsburg",
+      "endLocation":{
+         "longitude":9.193593,
+         "latitude":48.691634
+      },
+      "endAddress":"Harteneckstraße 15, 71640 Ludwigsburg",
+      "distance":14
+   },
+   {
+      "id":4,
+      "date":"15.02.2020",
+      "category":"Geschäftsfahrt",
+      "activeDays":0,
+      "startLocation":{
+         "longitude":9.173058,
+         "latitude":48.781693
+      },
+      "startAddress":"Grönerstraße 9, 71640 Ludwigsburg",
+      "endLocation":{
+         "longitude":9.193593,
+         "latitude":48.691634
+      },
+      "endAddress":"Harteneckstraße 15, 71640 Ludwigsburg",
+      "distance":14
+   }
+]

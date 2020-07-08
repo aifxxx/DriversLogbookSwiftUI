@@ -10,31 +10,23 @@ import SwiftUI
 
 struct FullTripListView: View {
     @State var selected = 0
-        
-        
-        var body: some View {
-            
-            NavigationView {
-            
+    @EnvironmentObject var dataViewModel: DataViewModel
+
+    var body: some View {
+        NavigationView {
             VStack () {
                 CustomSegmentedControl(selected: self.$selected)
-                
                 if self.selected == 0 {
-                    TripListDescending()
-                    
-                    
+                    TripList(trips: $dataViewModel.tripData, sorting: .descending)
                 } else if self.selected == 1 {
-                    TripListAscending()
-                    
-                    
+                    TripList(trips: $dataViewModel.tripData, sorting: .ascending)
                 } else {
-                    TripListStatus()
+                    TripList(trips: $dataViewModel.tripData, sorting: .status)
                 }
             }.background(Color("Color").edgesIgnoringSafeArea(.all))
-                .navigationBarTitle("Deine Fahrten")
-                
-            }
+            .navigationBarTitle("Deine Fahrten")
         }
+    }
 }
 
 struct FullTripListView_Previews: PreviewProvider {
