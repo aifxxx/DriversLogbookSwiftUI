@@ -87,9 +87,7 @@ struct TripDetail: View {
                                 .bold()
                             
                             //Radio Buttons, active: tick
-                            RadioButtonGroup(selectedID: $trip.category) { selected in
-                                //print("Selected item: \(selected)")
-//                                self.trip.category = selected
+                            RadioButtonGroup(selectedID: $trip.category) { _ in
                             }.padding(.bottom, -10)
                             
                         }.font(.custom("PorscheNext-Regular", size: 16))

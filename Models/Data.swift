@@ -11,21 +11,7 @@ import SwiftUI
 import CoreLocation
 
 class DataViewModel: ObservableObject {
-    @Published var tripData: [Trip] = [] {
-        didSet {
-            tripDataSortedDescending = tripData.sorted { $0.date > $1.date }
-            tripDataSortedAscending = tripData.sorted { $0.date < $1.date }
-            tripDataSortedStaus = tripData.sorted { $0.activeDays < $1.activeDays }
-        }
-    }
-
-    @Published var tripDataSortedDescending: [Trip] = []
-    @Published var tripDataSortedAscending: [Trip] = []
-    @Published var tripDataSortedStaus: [Trip] = []
-
-    func fetch() {
-        tripData = load("TripData.json")
-    }
+    @Published var tripData: [Trip] = load("TripData.json")
 }
 
 var tripData: [Trip] = load("TripData.json")

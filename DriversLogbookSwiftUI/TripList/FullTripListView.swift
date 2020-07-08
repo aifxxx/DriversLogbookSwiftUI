@@ -12,19 +12,16 @@ struct FullTripListView: View {
     @State var selected = 0
     @ObservedObject var dataViewModel: DataViewModel = DataViewModel()
 
-    init() {
-        dataViewModel.fetch()
-    }
     var body: some View {
         NavigationView {
             VStack () {
                 CustomSegmentedControl(selected: self.$selected)
                 if self.selected == 0 {
-                    TripList(trips: $dataViewModel.tripData)
+                    TripList(trips: $dataViewModel.tripData, sorting: .descending)
                 } else if self.selected == 1 {
-                    TripList(trips: $dataViewModel.tripDataSortedAscending)
+                    TripList(trips: $dataViewModel.tripData, sorting: .ascending)
                 } else {
-                    TripList(trips: $dataViewModel.tripDataSortedStaus)
+                    TripList(trips: $dataViewModel.tripData, sorting: .status)
                 }
             }.background(Color("Color").edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Deine Fahrten")
