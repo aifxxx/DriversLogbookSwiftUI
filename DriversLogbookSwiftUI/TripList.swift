@@ -42,12 +42,10 @@ struct TripList: View {
     var body: some View {
         List {
             ForEach(sortedList) { trip in
-                let index = trips.firstIndex(of: trip)!
-
                 Section(header: Text(trip.date)) {
                     ZStack (alignment: .center){
                         TripCard(trip: trip)
-                        NavigationLink(destination: TripDetail(trip: $trips[index])) {
+                        NavigationLink(destination: TripDetail(trip: self.$trips[self.trips.firstIndex(of: trip)!])) {
                             TripCard(trip: trip)
                         }
                         .buttonStyle(PlainButtonStyle())

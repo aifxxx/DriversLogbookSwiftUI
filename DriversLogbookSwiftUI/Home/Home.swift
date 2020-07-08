@@ -34,12 +34,11 @@ struct Home: View {
                     //Aktive Fahrten hier
 
                     VStack {
-                        ForEach(tripViewModel.tripData.indices) { index in
-                            let trip = tripViewModel.tripData[index]
+                        ForEach(tripViewModel.tripData) { trip in
                             ZStack (alignment: .center){
                                 if trip.activeDays > 0 {
                                     TripCard(trip: trip)
-                                    NavigationLink(destination: TripDetail(trip: $tripViewModel.tripData[index])) {
+                                    NavigationLink(destination: TripDetail(trip: self.$tripViewModel.tripData[self.tripViewModel.tripData.firstIndex(of: trip)!])) {
                                         TripCard(trip: trip)
                                     }
                                     .buttonStyle(PlainButtonStyle())
