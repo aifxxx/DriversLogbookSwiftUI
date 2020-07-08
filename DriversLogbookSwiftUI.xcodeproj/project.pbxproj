@@ -47,6 +47,8 @@
 		0DADB62B24A9CF560041B8EC /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62A24A9CF560041B8EC /* Sorting.swift */; };
 		0DADB62D24AA196D0041B8EC /* TryRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB62C24AA196D0041B8EC /* TryRadioButton.swift */; };
 		0DADB67424AE17020041B8EC /* ActiveTripMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB67324AE17020041B8EC /* ActiveTripMarker.swift */; };
+		0DADB67624AF15990041B8EC /* CalculateBarGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB67524AF15990041B8EC /* CalculateBarGraphData.swift */; };
+		0DADB67A24B4BB630041B8EC /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DADB67924B4BB630041B8EC /* Launch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		0DADB62A24A9CF560041B8EC /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		0DADB62C24AA196D0041B8EC /* TryRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryRadioButton.swift; sourceTree = "<group>"; };
 		0DADB67324AE17020041B8EC /* ActiveTripMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTripMarker.swift; sourceTree = "<group>"; };
+		0DADB67524AF15990041B8EC /* CalculateBarGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateBarGraphData.swift; sourceTree = "<group>"; };
+		0DADB67924B4BB630041B8EC /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 		0D428FB7249A1FF6000814A5 /* DriversLogbookSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0DADB67824B4BB550041B8EC /* Launchscreen */,
 				0DADB62324A9CA790041B8EC /* TripList */,
 				0D42902F249C962F000814A5 /* TripDetail */,
 				0D42902C249BAFF3000814A5 /* Profile */,
@@ -254,6 +259,7 @@
 				0D429022249B9CAE000814A5 /* Home.swift */,
 				0D429028249BA6F9000814A5 /* BarGraph.swift */,
 				0D42902A249BABD3000814A5 /* TabBar.swift */,
+				0DADB67524AF15990041B8EC /* CalculateBarGraphData.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -286,6 +292,14 @@
 				0DADB67324AE17020041B8EC /* ActiveTripMarker.swift */,
 			);
 			path = TripList;
+			sourceTree = "<group>";
+		};
+		0DADB67824B4BB550041B8EC /* Launchscreen */ = {
+			isa = PBXGroup;
+			children = (
+				0DADB67924B4BB630041B8EC /* Launch.swift */,
+			);
+			path = Launchscreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +477,7 @@
 				0D429023249B9CAE000814A5 /* Home.swift in Sources */,
 				0DADB62224A62C5B0041B8EC /* MapView.swift in Sources */,
 				0D428FFE249B6812000814A5 /* Data.swift in Sources */,
+				0DADB67A24B4BB630041B8EC /* Launch.swift in Sources */,
 				0D428FBE249A1FF6000814A5 /* DriversLogbookSwiftUI.xcdatamodeld in Sources */,
 				0D429031249C964B000814A5 /* BackgroundPrivate.swift in Sources */,
 				0D428FC0249A1FF6000814A5 /* ContentView.swift in Sources */,
@@ -473,6 +488,7 @@
 				0D42902B249BABD3000814A5 /* TabBar.swift in Sources */,
 				0D429004249B6AB2000814A5 /* TripList.swift in Sources */,
 				0D428FBB249A1FF6000814A5 /* SceneDelegate.swift in Sources */,
+				0DADB67624AF15990041B8EC /* CalculateBarGraphData.swift in Sources */,
 				0D429027249B9D95000814A5 /* User.swift in Sources */,
 				0DADB62D24AA196D0041B8EC /* TryRadioButton.swift in Sources */,
 			);

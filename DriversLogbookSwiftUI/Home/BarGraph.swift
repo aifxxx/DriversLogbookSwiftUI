@@ -18,7 +18,31 @@ struct BarGraph: View {
     var bar1 = Bar(percent: 145, category: "Privatfahrt")
     var bar2 = Bar(percent: 116, category: "Geschäftsfahrt")
     var bar3 = Bar(percent: 29, category: "Arbeitsweg")
-        
+    
+    @State var trip: Trip?
+    
+    
+    
+    var totalTrips: Int {
+        let trips = tripData
+        let sum = trips.count
+        return sum
+    }
+    
+    
+    var totalKilometers: Int {
+        let sum = sumDistance
+        return sum
+    }
+    
+    var countPr: Int {
+        let sumPrivKM = busKM
+        return sumPrivKM!
+    }
+    
+    
+    
+            
         var body: some View {
 
         ScrollView(.vertical, showsIndicators: false) {
@@ -28,22 +52,22 @@ struct BarGraph: View {
                     HStack(alignment: .center, spacing: 0) {
                         
                         VStack(alignment: .leading, spacing: 0.0) {
-                            Text("XXXX km")
+                            Text("\(totalKilometers) km")
                                 .font(.custom("PorscheNext-SemiBold", size: 20))
                                 .padding(0.0)
                             Text("Gesamt")
                                 .font(.custom("PorscheNext-Thin", size: 16))
                         }.frame(maxWidth: .infinity)
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("XXX km")
+                            Text("\(totalKilometers) km")
                             .font(.custom("PorscheNext-SemiBold", size: 20))
-                            Text("2019")
+                            Text("2020")
                             .font(.custom("PorscheNext-Thin", size: 16))
                         }.frame(maxWidth: .infinity)
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("XX")
+                            Text("\(totalTrips)")
                             .font(.custom("PorscheNext-SemiBold", size: 20))
-                            Text("Fahrten 2019")
+                            Text("Fahrten 2020")
                             .font(.custom("PorscheNext-Thin", size: 16))
                         }.frame(maxWidth: .infinity)
                     }
@@ -121,7 +145,7 @@ struct BarGraph: View {
                     
                     }
                         VStack {
-                        Text("Kilometeranteile von 2019")
+                        Text("Kilometeranteile von 2020")
                             .font(.custom("PorscheNext-Thin", size: 12))
                             .padding(.leading, 200)
                             
@@ -190,3 +214,6 @@ var percents = [
     type(id: 1, percent: 40, category: "Geschäftsfahrt"),
     type(id: 2, percent: 10, category: "Arbeitsweg")
 ]
+
+
+

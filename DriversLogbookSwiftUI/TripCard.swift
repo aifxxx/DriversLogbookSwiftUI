@@ -88,7 +88,7 @@ struct TripCard: View {
                 }.padding(.leading, 8)
                 
                 //                            .font(.custom("PorscheNext-SemiBold", size: 18))
-            }.frame(width: 335, height: 187)
+            }.frame(width: 335, height: 187) 
 
         }
     }

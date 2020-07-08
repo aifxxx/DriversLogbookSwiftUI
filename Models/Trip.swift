@@ -21,7 +21,17 @@ struct Trip: Hashable, Codable, Identifiable{
     var endAddress: String
     var distance: Int
     
-
+    init(id: Int, date: String, category: String, activeDays: Int, startLocation: Coordinates, endLocation: Coordinates, startAddress: String, endAddress: String, distance: Int) {
+        self.id = id
+        self.date = date
+        self.category = category
+        self.activeDays = activeDays
+        self.startLocation = startLocation
+        self.endLocation = endLocation
+        self.startAddress = startAddress
+        self.endAddress = endAddress
+        self.distance = distance
+    }
     
     var startLocationCoordinates: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
@@ -44,10 +54,16 @@ struct Trip: Hashable, Codable, Identifiable{
         [startLocationCoordinates, endLocationCoordinates]
     }
     
+//neues Array nur mit der jeweiligen Trip Kategorie
+    
+    
 struct Coordinates: Hashable, Codable {
     var latitude: Double
     var longitude: Double
 }
 }
+
+
+
 
 
