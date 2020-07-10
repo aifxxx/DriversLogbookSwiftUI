@@ -34,15 +34,15 @@ struct Home: View {
                     //Aktive Fahrten hier
 
                     VStack {
-                        let activeTrips = tripViewModel.tripData.filter {$0.activeDays > 0 }
-                        ForEach(activeTrips) { trip in
+                        ForEach(tripViewModel.tripData) { trip in
+                            if trip.activeDays > 0 {
                                 NavigationLink(destination: TripDetail(trip: self.$tripViewModel.tripData[self.tripViewModel.tripData.firstIndex(of: trip)!])) {
                                     TripCard(trip: trip)
                                 }
                                 .buttonStyle(PlainButtonStyle())
-//                                .frame(width: 0)
-//                                .opacity(0)
-//                            }
+                            } else {
+                                EmptyView()
+                            }
                         }
                     }.font(.custom("PorscheNext-SemiBold", size: 20))
                     .foregroundColor(.black)

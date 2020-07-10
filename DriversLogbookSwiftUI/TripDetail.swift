@@ -118,31 +118,30 @@ struct TripDetailsView: View {
     var distance: Int
 
     var body: some View {
-        //Top part: start and end and distance
-        Text("Start")
-            .bold()
-        Text(start)
-        // TODO: add start milage
-        Text("Ziel")
-            .bold()
-            .padding(.top, 20)
-        Text(end)
-        // TODO: add end milage
+        VStack(alignment: .leading) {
+            //Top part: start and end and distance
+            Text("Start")
+                .bold()
+            Text(start)
+            // TODO: add start milage
+            Text("Ziel")
+                .bold()
+                .padding(.top, 20)
+            Text(end)
+            // TODO: add end milage
 
-        HStack {
-            Image("distance")
-            Text("\(distance) km")
+            HStack {
+                Image("distance")
+                Text("\(distance) km")
+                    .font(.custom("PorscheNext-SemiBold", size: 16))
+            }
         }
-
     }
 }
 struct TripDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TripDetail(trip: .constant(tripData[0]))            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+        TripDetail(trip: .constant(tripData[0]))
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
             .previewDisplayName("iPhone SE")
-
-        TripDetail(trip: .constant(tripData[0]))            .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro Max"))
-            .previewDisplayName("iPhone 11 Pro Max")
-
     }
 }
