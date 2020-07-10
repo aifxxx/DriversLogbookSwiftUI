@@ -35,7 +35,7 @@ struct MapView: UIViewRepresentable {
     {
         if(mapView.annotations.count == 0)
         {
-              return
+            return
         }
 
         var topLeftCoord = CLLocationCoordinate2D.init(latitude: -90, longitude: 180)
@@ -60,33 +60,15 @@ struct MapView: UIViewRepresentable {
 
         var region = MKCoordinateRegion.init(center: resd, span: span);
 
-
-
         region = mapView.regionThatFits(region)
-
         mapView.setRegion(region, animated: true)
-
-
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     func makeUIView(context:
-        UIViewRepresentableContext<MapView>) -> MKMapView {
+                        UIViewRepresentableContext<MapView>) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
-        
-        
-        
-        
-        
-        
+
         let startAnnotation = MKPointAnnotation()
         startAnnotation.title = "Start"
         startAnnotation.subtitle = trip.startAddress
@@ -101,55 +83,18 @@ struct MapView: UIViewRepresentable {
         
         return mapView
     }
-    
-    
-    
+
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        
+
         let startAnnotation = trip.startLocationCoordinates
-        
+
         zoomToFitMapAnnotations(mapView: uiView)
-          
-            
-        
-        
-//        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-//
-//        let region = MKCoordinateRegion(center: startAnnotation, span: span)
-//
-//        uiView.setRegion(region, animated: true)
-        
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
-        
         mapView.centerToStartAnnotation(trip.startLocationCoordinates)
-        
-        
         mapView.showAnnotations(mapView.annotations, animated: true)
- 
     }
-    
-    
-    
-//    func getSpanForCoordinates() {
-//        let minX: Double
-//        let maxX: Double
-//        let minY: Double
-//        let maxY: Double
-//
-//        minX = trip.latitudeArray.min()!
-//        maxX = trip.latitudeArray.max()!
-//        minY = trip.longitudeArray.min()!
-//        maxY = trip.longitudeArray.max()!
-//
-//        let deltaX = maxX - minX
-//        let deltaY = maxY - minX
-//
-//        var latitudeDelta: Double
-//        var longitudeDelta: Double
-//    }
-
 }
 
 struct MapView_Previews: PreviewProvider {
@@ -159,16 +104,16 @@ struct MapView_Previews: PreviewProvider {
 }
 
 private extension MKMapView {
-  func centerToStartAnnotation(
-    _ startLocation: CLLocationCoordinate2D,
-    regionRadius: CLLocationDistance = 1000
-  ) {
-    let coordinateRegion = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: startLocation.latitude, longitude: startLocation.longitude),
-      latitudinalMeters: regionRadius,
-      longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
+    func centerToStartAnnotation(
+        _ startLocation: CLLocationCoordinate2D,
+        regionRadius: CLLocationDistance = 1000
+    ) {
+        let coordinateRegion = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: startLocation.latitude, longitude: startLocation.longitude),
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
+    }
 }
 
 
