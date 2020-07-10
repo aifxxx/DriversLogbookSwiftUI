@@ -34,24 +34,19 @@ struct Home: View {
                     //Aktive Fahrten hier
 
                     VStack {
-                        ForEach(tripViewModel.tripData) { trip in
-                            ZStack (alignment: .center){
-                                if trip.activeDays > 0 {
+                        let activeTrips = tripViewModel.tripData.filter {$0.activeDays > 0 }
+                        ForEach(activeTrips) { trip in
+                                NavigationLink(destination: TripDetail(trip: self.$tripViewModel.tripData[self.tripViewModel.tripData.firstIndex(of: trip)!])) {
                                     TripCard(trip: trip)
-                                    NavigationLink(destination: TripDetail(trip: self.$tripViewModel.tripData[self.tripViewModel.tripData.firstIndex(of: trip)!])) {
-                                        TripCard(trip: trip)
-                                    }
-                                    .buttonStyle(PlainButtonStyle())
-                                    .frame(width: 0)
-                                    .opacity(0)
-                                } else {
-                                    EmptyView()
                                 }
-                            }
+                                .buttonStyle(PlainButtonStyle())
+//                                .frame(width: 0)
+//                                .opacity(0)
+//                            }
                         }
                     }.font(.custom("PorscheNext-SemiBold", size: 20))
                     .foregroundColor(.black)
-                    .padding(.leading, 20)
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
                     Spacer()
                     Text("Alle Fahrten findest du unter Fahrtenbuch")

@@ -12,76 +12,95 @@ struct TripCard: View {
     var trip: Trip
 
     var body: some View {
-        ZStack (alignment: .topLeading) {
-//Background
-        RoundedRectangle(cornerRadius: 4)
-        .frame(width: 335, height: 187)
-        .foregroundColor(Color.white)
-        .shadow(color: Color.gray.opacity(0.5), radius: 7, x: 0, y: 0)
-            
-            if trip.activeDays > 0 {
-                ActiveTripMarker()
-                .frame(width: 10, height: 187, alignment: .leading)
-            }
-            VStack (alignment: .leading){
-//Category and active status
-                HStack (alignment: .center){
-//Category Icon
-                    Image(trip.category)
-                    Text(trip.category)
-                    .font(.custom("PorscheNext-SemiBold", size: 18))
-                    
-                    Spacer()
-                    
-//red=1-3days, yellow=4-7, clear=else
-                    if trip.activeDays >= 3 {
-                        Image("active")
-                        
-                    } else if trip.activeDays > 0 {
-                    Image("active3")
-                        
-                    } else {
-                    Image("active0")
-                    }
-                    
-                    if trip.activeDays > 0 {
-                        Text("Noch \(trip.activeDays) Tage bearbeitbar")
-                        .font(.custom("PorscheNext-Thin", size: 12))
-                        .foregroundColor(Color.init("FontLight"))
-                        .padding(.leading, 2)
-                    }
-                    
-                    
-                }.frame(width: 305, alignment: .center)
-                    .padding(.leading, 8)
-//Adresses
-                HStack () {
-                        Image("route")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 12, height: 52)
-                            //.padding(.leading, -15)
-                    
-                    VStack (alignment: .leading){
-                        Text(trip.startAddress)
-                        .font(.custom("PorscheNext-Regular", size: 16))
-                        Text(trip.endAddress)
-                        .font(.custom("PorscheNext-Regular", size: 16))
-                    
-                    }
-                }.frame(width: 305, alignment: .leading)
-                    .padding(.leading, 14)
-                
-                HStack {
-                        Image("distance")
-                        Text("\(trip.distance) km")
-                        .font(.custom("PorscheNext-SemiBold", size: 16))
-                }.padding(.leading, 8)
-                
-                //                            .font(.custom("PorscheNext-SemiBold", size: 18))
-            }.frame(width: 335, height: 187) 
 
+        ZStack (alignment: .topLeading) {
+            //Background
+            RoundedRectangle(cornerRadius: 4)
+                .foregroundColor(Color.white)
+                .shadow(color: Color.gray.opacity(0.5), radius: 7, x: 0, y: 0)
+
+            HStack(alignment: .top) {
+                ActiveTripMarker(color: trip.activeDays > 0 ? Color.init("PorscheRot") : Color.white)
+                    .frame(width: 10, alignment: .leading)
+                VStack (alignment: .leading){
+                    //Category and active status
+                    TripCategoryView(category: trip.category, activeDays: trip.activeDays)
+                    TripAddressView(startAddress: trip.startAddress, endAddress: trip.endAddress)
+                    TripDistanceView(distance: trip.distance)
+                        .padding(.bottom, 12)
+                } .padding(.top, 20)
+            }
         }
+    }
+}
+
+struct TripCategoryView: View {
+    var category: String
+    var activeDays: Int
+    var body: some View {
+        HStack (alignment: .center){
+            //Category Icon
+            Image(category)
+            Text(category)
+                .font(.custom("PorscheNext-SemiBold", size: 18))
+            Spacer()
+
+            //red=1-3days, yellow=4-7, clear=else
+            if activeDays >= 3 {
+                Image("active")
+
+            } else if activeDays > 0 {
+                Image("active3")
+
+            } else {
+                Image("active0")
+            }
+
+            if activeDays > 0 {
+                Text("Noch \(activeDays) Tage bearbeitbar")
+                    .font(.custom("PorscheNext-Thin", size: 12))
+                    .foregroundColor(Color.init("FontLight"))
+                    .padding(.leading, 2)
+            }
+        }
+        .padding(.leading, 0)
+        .padding(.trailing, 8)
+    }
+}
+
+struct TripAddressView: View {
+    var startAddress: String
+    var endAddress: String
+    var body: some View {
+        //Adresses
+        HStack () {
+            Image("route")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 12, height: 52)
+            //.padding(.leading, -15)
+
+            VStack (alignment: .leading){
+                Text(startAddress)
+                    .font(.custom("PorscheNext-Regular", size: 16))
+                Text(endAddress)
+                    .font(.custom("PorscheNext-Regular", size: 16))
+
+            }
+        }
+        .padding(.leading, 14)
+    }
+}
+
+struct TripDistanceView: View {
+    var distance: Int
+    var body: some View {
+        HStack {
+            Image("distance")
+            Text("\(distance) km")
+                .font(.custom("PorscheNext-SemiBold", size: 16))
+        }.padding(.leading, 8)
+        .font(.custom("PorscheNext-SemiBold", size: 18))
     }
 }
 
@@ -90,10 +109,10 @@ struct Tripcard_Previews: PreviewProvider {
         Group {
             TripCard(trip: tripData[0])
             TripCard(trip: tripData[1])
-            TripCard(trip: tripData[2])
+            //            TripCard(trip: tripData[2])
             TripCard(trip: tripData[3])
         }
-        .previewLayout(.fixed(width: 335, height: 187))
+        .previewLayout(.fixed(width: 400, height: 400))
     }
 }
 

@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct ActiveTripMarker: View {
+    var color: Color
     var body: some View {
         RoundedRectangle(cornerRadius: 0, style: .circular)
-        .fill(Color.init("PorscheRot"))
-        .frame(width: 8, height: 187, alignment: .center)
-        
+        .fill(color)
+
         .cornerRadius(50, corners: [.topLeft, .bottomLeft])
-        .foregroundColor(Color.init("PorscheRot"))
+        .foregroundColor(color)
     }
 }
 
@@ -32,7 +32,7 @@ struct RoundedCorner: Shape {
 
 struct ActiveTripMarker_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveTripMarker()
+        ActiveTripMarker(color: Color.init("PorscheRot"))
     }
 }
 

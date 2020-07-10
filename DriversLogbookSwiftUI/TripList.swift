@@ -49,10 +49,8 @@ struct TripList: View {
                             TripCard(trip: trip)
                         }
                         .buttonStyle(PlainButtonStyle())
-                        .frame(width: 0)
                         .opacity(0)
                     }
-                    .frame(width: 335, height: 187, alignment: .center)
                 }.font(.custom("PorscheNext-SemiBold", size: 20))
                 .foregroundColor(.black)
             }

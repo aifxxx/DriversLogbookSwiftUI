@@ -30,27 +30,8 @@ struct TripDetail: View {
                     Spacer().padding(.top, 60)
                     
                     //Date and Aktive Days
-                    HStack {
-                        Text(trip.date)
-                            .font(.custom("PorscheNext-SemiBold", size: 20))
-                        if trip.activeDays >= 3 {
-                            Image("active")
-                                .padding(.leading, 52)
-                            
-                        } else if trip.activeDays >= 0 {
-                            Image("active3")
-                                .padding(.leading, 52)
-                            
-                        } else {
-                            Image("active0")
-                                .padding(.leading, 52)
-                            
-                        }
-                        Text("Noch \(trip.activeDays) Tage bearbeitbar")
-                            .font(.custom("PorscheNext-Thin", size: 12))
-                            .foregroundColor(Color.init("FontLight"))
-                        
-                    }.padding(.top, -20)
+                    TripDetailHeaderView(date: trip.date, activeDays: trip.activeDays)
+                        .padding(.top, -20)
                     
                     //Card Design from Start to Category
                     ZStack {
@@ -59,29 +40,12 @@ struct TripDetail: View {
                         
                         //Card elements
                         VStack (alignment: .leading) {
-                            //Top part: start and end and distance
-                            Text("Start")
-                                .bold()
-                            Text(trip.startAddress)
-                            // TODO: add start milage
-                            Text("Ziel")
-                                .bold()
-                                .padding(.top, 20)
-                            Text(trip.endAddress)
-                            // TODO: add end milage
-                            
-                            HStack {
-                                Image("distance")
-                                Text("\(trip.distance) km")
-                            }
-                            
-                            MapView(trip: trip).frame(width: 280, height: 180)
+                            TripDetailsView(start: trip.startAddress, end: trip.endAddress, distance: trip.distance)
+                            MapView(trip: trip).frame(height: 180)
                             
                             //Divider
                             Image("Line")
-                            //.padding(.top, 10)
-                            //.padding(.bottom, 10)
-                            
+
                             //Bottom part: Category
                             Text("Fahrtkategorie")
                                 .bold()
@@ -119,8 +83,66 @@ struct TripDetail: View {
     }
 }
 
+struct TripDetailHeaderView: View {
+    var date: String
+    var activeDays: Int
+
+    var body: some View {
+        HStack {
+            Text(date)
+                .font(.custom("PorscheNext-SemiBold", size: 20))
+            if activeDays >= 3 {
+                Image("active")
+                    .padding(.leading, 52)
+
+            } else if activeDays >= 0 {
+                Image("active3")
+                    .padding(.leading, 52)
+
+            } else {
+                Image("active0")
+                    .padding(.leading, 52)
+
+            }
+            Text("Noch \(activeDays) Tage bearbeitbar")
+                .font(.custom("PorscheNext-Thin", size: 12))
+                .foregroundColor(Color.init("FontLight"))
+
+        }
+    }
+}
+
+struct TripDetailsView: View {
+    var start: String
+    var end: String
+    var distance: Int
+
+    var body: some View {
+        //Top part: start and end and distance
+        Text("Start")
+            .bold()
+        Text(start)
+        // TODO: add start milage
+        Text("Ziel")
+            .bold()
+            .padding(.top, 20)
+        Text(end)
+        // TODO: add end milage
+
+        HStack {
+            Image("distance")
+            Text("\(distance) km")
+        }
+
+    }
+}
 struct TripDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TripDetail(trip: .constant(tripData[0]))
+        TripDetail(trip: .constant(tripData[0]))            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+            .previewDisplayName("iPhone SE")
+
+        TripDetail(trip: .constant(tripData[0]))            .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro Max"))
+            .previewDisplayName("iPhone 11 Pro Max")
+
     }
 }
